@@ -1,0 +1,1287 @@
+93 jobs to run (0 already finished in out):
+   joint_p4         seed 0   ~29.2 h
+   joint_p3_2d      seed 0   ~24.2 h
+   tissuemnist      seed 0   ~11.4 h
+   tissuemnist      seed 1   ~11.4 h
+   tissuemnist      seed 2   ~11.4 h
+   tissuemnist      seed 3   ~11.4 h
+   tissuemnist      seed 4   ~11.4 h
+   octmnist         seed 0   ~6.7 h
+   octmnist         seed 1   ~6.7 h
+   octmnist         seed 2   ~6.7 h
+   octmnist         seed 3   ~6.7 h
+   octmnist         seed 4   ~6.7 h
+   pathmnist        seed 0   ~6.2 h
+   pathmnist        seed 1   ~6.2 h
+   pathmnist        seed 2   ~6.2 h
+   pathmnist        seed 3   ~6.2 h
+   pathmnist        seed 4   ~6.2 h
+   chestmnist       seed 0   ~5.4 h
+   chestmnist       seed 1   ~5.4 h
+   chestmnist       seed 2   ~5.4 h
+   chestmnist       seed 3   ~5.4 h
+   chestmnist       seed 4   ~5.4 h
+   joint_p3_3d      seed 0   ~5.0 h
+   organamnist      seed 0   ~2.4 h
+   organamnist      seed 1   ~2.4 h
+   organamnist      seed 2   ~2.4 h
+   organamnist      seed 3   ~2.4 h
+   organamnist      seed 4   ~2.4 h
+   organmnist3d     seed 0   (3D: estimate unknown)
+   organmnist3d     seed 1   (3D: estimate unknown)
+   organmnist3d     seed 2   (3D: estimate unknown)
+   organmnist3d     seed 3   (3D: estimate unknown)
+   organmnist3d     seed 4   (3D: estimate unknown)
+   nodulemnist3d    seed 0   (3D: estimate unknown)
+   nodulemnist3d    seed 1   (3D: estimate unknown)
+   nodulemnist3d    seed 2   (3D: estimate unknown)
+   nodulemnist3d    seed 3   (3D: estimate unknown)
+   nodulemnist3d    seed 4   (3D: estimate unknown)
+   fracturemnist3d  seed 0   (3D: estimate unknown)
+   fracturemnist3d  seed 1   (3D: estimate unknown)
+   fracturemnist3d  seed 2   (3D: estimate unknown)
+   fracturemnist3d  seed 3   (3D: estimate unknown)
+   fracturemnist3d  seed 4   (3D: estimate unknown)
+   adrenalmnist3d   seed 0   (3D: estimate unknown)
+   adrenalmnist3d   seed 1   (3D: estimate unknown)
+   adrenalmnist3d   seed 2   (3D: estimate unknown)
+   adrenalmnist3d   seed 3   (3D: estimate unknown)
+   adrenalmnist3d   seed 4   (3D: estimate unknown)
+   vesselmnist3d    seed 0   (3D: estimate unknown)
+   vesselmnist3d    seed 1   (3D: estimate unknown)
+   vesselmnist3d    seed 2   (3D: estimate unknown)
+   vesselmnist3d    seed 3   (3D: estimate unknown)
+   vesselmnist3d    seed 4   (3D: estimate unknown)
+   synapsemnist3d   seed 0   (3D: estimate unknown)
+   synapsemnist3d   seed 1   (3D: estimate unknown)
+   synapsemnist3d   seed 2   (3D: estimate unknown)
+   synapsemnist3d   seed 3   (3D: estimate unknown)
+   synapsemnist3d   seed 4   (3D: estimate unknown)
+   organsmnist      seed 0   ~1.0 h
+   organsmnist      seed 1   ~1.0 h
+   organsmnist      seed 2   ~1.0 h
+   organsmnist      seed 3   ~1.0 h
+   organsmnist      seed 4   ~1.0 h
+   organcmnist      seed 0   ~0.9 h
+   organcmnist      seed 1   ~0.9 h
+   organcmnist      seed 2   ~0.9 h
+   organcmnist      seed 3   ~0.9 h
+   organcmnist      seed 4   ~0.9 h
+   bloodmnist       seed 0   ~0.8 h
+   bloodmnist       seed 1   ~0.8 h
+   bloodmnist       seed 2   ~0.8 h
+   bloodmnist       seed 3   ~0.8 h
+   bloodmnist       seed 4   ~0.8 h
+   dermamnist       seed 0   ~0.5 h
+   dermamnist       seed 1   ~0.5 h
+   dermamnist       seed 2   ~0.5 h
+   dermamnist       seed 3   ~0.5 h
+   dermamnist       seed 4   ~0.5 h
+   pneumoniamnist   seed 0   ~0.3 h
+   pneumoniamnist   seed 1   ~0.3 h
+   pneumoniamnist   seed 2   ~0.3 h
+   pneumoniamnist   seed 3   ~0.3 h
+   pneumoniamnist   seed 4   ~0.3 h
+   retinamnist      seed 0   ~0.1 h
+   retinamnist      seed 1   ~0.1 h
+   retinamnist      seed 2   ~0.1 h
+   retinamnist      seed 3   ~0.1 h
+   retinamnist      seed 4   ~0.1 h
+   breastmnist      seed 0   ~0.0 h
+   breastmnist      seed 1   ~0.0 h
+   breastmnist      seed 2   ~0.0 h
+   breastmnist      seed 3   ~0.0 h
+   breastmnist      seed 4   ~0.0 h
+   estimated total (2D on a T4, plus 3D if --ips3d given): 237 h
+[queue] 062e058f90c2:1195 -> joint_p3_2d seed 0
+[start] joint_p3_2d: 12 tasks, 100 rounds, cap 300 it/task | pathmnist:89996, chestmnist:78468, dermamnist:7007, octmnist:97477, pneumoniamnist:4708, retinamnist:1080, breastmnist:546, bloodmnist:11959, tissuemnist:165466, organamnist:34561, organcmnist:12975, organsmnist:13932
+Traceback (most recent call last):
+  File "/workspace/kit/run_queue.py", line 165, in <module>
+    r = run_joint(f[len("joint_"):], a.out_dir, a.data_root, rounds=a.joint_rounds,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/kit/medmnist_joint.py", line 308, in run_joint
+    res = evaluate_all(model, tasks, amp)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/kit/medmnist_joint.py", line 220, in evaluate_all
+    auc, acc = t.val_eval.evaluate(t.predict(model, t.val, amp))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/medmnist/evaluator.py", line 47, in evaluate
+    auc = getAUC(self.labels, y_score, task)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/medmnist/evaluator.py", line 162, in getAUC
+    auc += roc_auc_score(y_true_binary, y_score_binary)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/sklearn/utils/_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_ranking.py", line 710, in roc_auc_score
+    y_score = check_array(y_score, ensure_2d=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py", line 1090, in check_array
+    _assert_all_finite(
+  File "/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py", line 137, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py", line 186, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input contains NaN.
+93 jobs to run (0 already finished in out):
+   joint_p4         seed 0   ~29.2 h
+   joint_p3_2d      seed 0   ~24.2 h
+   tissuemnist      seed 0   ~11.4 h
+   tissuemnist      seed 1   ~11.4 h
+   tissuemnist      seed 2   ~11.4 h
+   tissuemnist      seed 3   ~11.4 h
+   tissuemnist      seed 4   ~11.4 h
+   octmnist         seed 0   ~6.7 h
+   octmnist         seed 1   ~6.7 h
+   octmnist         seed 2   ~6.7 h
+   octmnist         seed 3   ~6.7 h
+   octmnist         seed 4   ~6.7 h
+   pathmnist        seed 0   ~6.2 h
+   pathmnist        seed 1   ~6.2 h
+   pathmnist        seed 2   ~6.2 h
+   pathmnist        seed 3   ~6.2 h
+   pathmnist        seed 4   ~6.2 h
+   chestmnist       seed 0   ~5.4 h
+   chestmnist       seed 1   ~5.4 h
+   chestmnist       seed 2   ~5.4 h
+   chestmnist       seed 3   ~5.4 h
+   chestmnist       seed 4   ~5.4 h
+   joint_p3_3d      seed 0   ~5.0 h
+   organamnist      seed 0   ~2.4 h
+   organamnist      seed 1   ~2.4 h
+   organamnist      seed 2   ~2.4 h
+   organamnist      seed 3   ~2.4 h
+   organamnist      seed 4   ~2.4 h
+   organmnist3d     seed 0   (3D: estimate unknown)
+   organmnist3d     seed 1   (3D: estimate unknown)
+   organmnist3d     seed 2   (3D: estimate unknown)
+   organmnist3d     seed 3   (3D: estimate unknown)
+   organmnist3d     seed 4   (3D: estimate unknown)
+   nodulemnist3d    seed 0   (3D: estimate unknown)
+   nodulemnist3d    seed 1   (3D: estimate unknown)
+   nodulemnist3d    seed 2   (3D: estimate unknown)
+   nodulemnist3d    seed 3   (3D: estimate unknown)
+   nodulemnist3d    seed 4   (3D: estimate unknown)
+   fracturemnist3d  seed 0   (3D: estimate unknown)
+   fracturemnist3d  seed 1   (3D: estimate unknown)
+   fracturemnist3d  seed 2   (3D: estimate unknown)
+   fracturemnist3d  seed 3   (3D: estimate unknown)
+   fracturemnist3d  seed 4   (3D: estimate unknown)
+   adrenalmnist3d   seed 0   (3D: estimate unknown)
+   adrenalmnist3d   seed 1   (3D: estimate unknown)
+   adrenalmnist3d   seed 2   (3D: estimate unknown)
+   adrenalmnist3d   seed 3   (3D: estimate unknown)
+   adrenalmnist3d   seed 4   (3D: estimate unknown)
+   vesselmnist3d    seed 0   (3D: estimate unknown)
+   vesselmnist3d    seed 1   (3D: estimate unknown)
+   vesselmnist3d    seed 2   (3D: estimate unknown)
+   vesselmnist3d    seed 3   (3D: estimate unknown)
+   vesselmnist3d    seed 4   (3D: estimate unknown)
+   synapsemnist3d   seed 0   (3D: estimate unknown)
+   synapsemnist3d   seed 1   (3D: estimate unknown)
+   synapsemnist3d   seed 2   (3D: estimate unknown)
+   synapsemnist3d   seed 3   (3D: estimate unknown)
+   synapsemnist3d   seed 4   (3D: estimate unknown)
+   organsmnist      seed 0   ~1.0 h
+   organsmnist      seed 1   ~1.0 h
+   organsmnist      seed 2   ~1.0 h
+   organsmnist      seed 3   ~1.0 h
+   organsmnist      seed 4   ~1.0 h
+   organcmnist      seed 0   ~0.9 h
+   organcmnist      seed 1   ~0.9 h
+   organcmnist      seed 2   ~0.9 h
+   organcmnist      seed 3   ~0.9 h
+   organcmnist      seed 4   ~0.9 h
+   bloodmnist       seed 0   ~0.8 h
+   bloodmnist       seed 1   ~0.8 h
+   bloodmnist       seed 2   ~0.8 h
+   bloodmnist       seed 3   ~0.8 h
+   bloodmnist       seed 4   ~0.8 h
+   dermamnist       seed 0   ~0.5 h
+   dermamnist       seed 1   ~0.5 h
+   dermamnist       seed 2   ~0.5 h
+   dermamnist       seed 3   ~0.5 h
+   dermamnist       seed 4   ~0.5 h
+   pneumoniamnist   seed 0   ~0.3 h
+   pneumoniamnist   seed 1   ~0.3 h
+   pneumoniamnist   seed 2   ~0.3 h
+   pneumoniamnist   seed 3   ~0.3 h
+   pneumoniamnist   seed 4   ~0.3 h
+   retinamnist      seed 0   ~0.1 h
+   retinamnist      seed 1   ~0.1 h
+   retinamnist      seed 2   ~0.1 h
+   retinamnist      seed 3   ~0.1 h
+   retinamnist      seed 4   ~0.1 h
+   breastmnist      seed 0   ~0.0 h
+   breastmnist      seed 1   ~0.0 h
+   breastmnist      seed 2   ~0.0 h
+   breastmnist      seed 3   ~0.0 h
+   breastmnist      seed 4   ~0.0 h
+   estimated total (2D on a T4, plus 3D if --ips3d given): 237 h
+[queue] 062e058f90c2:7815 -> joint_p3_2d seed 0
+[joint_p3_2d] mixed precision: bfloat16
+[start] joint_p3_2d: 12 tasks, 100 rounds, cap 300 it/task | pathmnist:89996, chestmnist:78468, dermamnist:7007, octmnist:97477, pneumoniamnist:4708, retinamnist:1080, breastmnist:546, bloodmnist:11959, tissuemnist:165466, organamnist:34561, organcmnist:12975, organsmnist:13932
+joint_p3_2d round   1/100 | mean val AUC student 0.5947 teacher 0.5053 | best 0.5947 (r1, student) | 11.1 min
+joint_p3_2d round   2/100 | mean val AUC student 0.6146 teacher 0.5034 | best 0.6146 (r2, student) | 7.1 min
+joint_p3_2d round   3/100 | mean val AUC student 0.5989 teacher 0.5979 | best 0.6146 (r2, student) | 7.1 min
+joint_p3_2d round   4/100 | mean val AUC student 0.5863 teacher 0.5958 | best 0.6146 (r2, student) | 7.1 min
+joint_p3_2d round   5/100 | mean val AUC student 0.6055 teacher 0.6040 | best 0.6146 (r2, student) | 7.1 min
+joint_p3_2d round   6/100 | mean val AUC student 0.6429 teacher 0.6379 | best 0.6429 (r6, student) | 7.1 min
+93 jobs to run (0 already finished in out):
+   joint_p4         seed 0   ~29.2 h
+   joint_p3_2d      seed 0   ~24.2 h
+   tissuemnist      seed 0   ~11.4 h
+   tissuemnist      seed 1   ~11.4 h
+   tissuemnist      seed 2   ~11.4 h
+   tissuemnist      seed 3   ~11.4 h
+   tissuemnist      seed 4   ~11.4 h
+   octmnist         seed 0   ~6.7 h
+   octmnist         seed 1   ~6.7 h
+   octmnist         seed 2   ~6.7 h
+   octmnist         seed 3   ~6.7 h
+   octmnist         seed 4   ~6.7 h
+   pathmnist        seed 0   ~6.2 h
+   pathmnist        seed 1   ~6.2 h
+   pathmnist        seed 2   ~6.2 h
+   pathmnist        seed 3   ~6.2 h
+   pathmnist        seed 4   ~6.2 h
+   chestmnist       seed 0   ~5.4 h
+   chestmnist       seed 1   ~5.4 h
+   chestmnist       seed 2   ~5.4 h
+   chestmnist       seed 3   ~5.4 h
+   chestmnist       seed 4   ~5.4 h
+   joint_p3_3d      seed 0   ~5.0 h
+   organamnist      seed 0   ~2.4 h
+   organamnist      seed 1   ~2.4 h
+   organamnist      seed 2   ~2.4 h
+   organamnist      seed 3   ~2.4 h
+   organamnist      seed 4   ~2.4 h
+   organmnist3d     seed 0   (3D: estimate unknown)
+   organmnist3d     seed 1   (3D: estimate unknown)
+   organmnist3d     seed 2   (3D: estimate unknown)
+   organmnist3d     seed 3   (3D: estimate unknown)
+   organmnist3d     seed 4   (3D: estimate unknown)
+   nodulemnist3d    seed 0   (3D: estimate unknown)
+   nodulemnist3d    seed 1   (3D: estimate unknown)
+   nodulemnist3d    seed 2   (3D: estimate unknown)
+   nodulemnist3d    seed 3   (3D: estimate unknown)
+   nodulemnist3d    seed 4   (3D: estimate unknown)
+   fracturemnist3d  seed 0   (3D: estimate unknown)
+   fracturemnist3d  seed 1   (3D: estimate unknown)
+   fracturemnist3d  seed 2   (3D: estimate unknown)
+   fracturemnist3d  seed 3   (3D: estimate unknown)
+   fracturemnist3d  seed 4   (3D: estimate unknown)
+   adrenalmnist3d   seed 0   (3D: estimate unknown)
+   adrenalmnist3d   seed 1   (3D: estimate unknown)
+   adrenalmnist3d   seed 2   (3D: estimate unknown)
+   adrenalmnist3d   seed 3   (3D: estimate unknown)
+   adrenalmnist3d   seed 4   (3D: estimate unknown)
+   vesselmnist3d    seed 0   (3D: estimate unknown)
+   vesselmnist3d    seed 1   (3D: estimate unknown)
+   vesselmnist3d    seed 2   (3D: estimate unknown)
+   vesselmnist3d    seed 3   (3D: estimate unknown)
+   vesselmnist3d    seed 4   (3D: estimate unknown)
+   synapsemnist3d   seed 0   (3D: estimate unknown)
+   synapsemnist3d   seed 1   (3D: estimate unknown)
+   synapsemnist3d   seed 2   (3D: estimate unknown)
+   synapsemnist3d   seed 3   (3D: estimate unknown)
+   synapsemnist3d   seed 4   (3D: estimate unknown)
+   organsmnist      seed 0   ~1.0 h
+   organsmnist      seed 1   ~1.0 h
+   organsmnist      seed 2   ~1.0 h
+   organsmnist      seed 3   ~1.0 h
+   organsmnist      seed 4   ~1.0 h
+   organcmnist      seed 0   ~0.9 h
+   organcmnist      seed 1   ~0.9 h
+   organcmnist      seed 2   ~0.9 h
+   organcmnist      seed 3   ~0.9 h
+   organcmnist      seed 4   ~0.9 h
+   bloodmnist       seed 0   ~0.8 h
+   bloodmnist       seed 1   ~0.8 h
+   bloodmnist       seed 2   ~0.8 h
+   bloodmnist       seed 3   ~0.8 h
+   bloodmnist       seed 4   ~0.8 h
+   dermamnist       seed 0   ~0.5 h
+   dermamnist       seed 1   ~0.5 h
+   dermamnist       seed 2   ~0.5 h
+   dermamnist       seed 3   ~0.5 h
+   dermamnist       seed 4   ~0.5 h
+   pneumoniamnist   seed 0   ~0.3 h
+   pneumoniamnist   seed 1   ~0.3 h
+   pneumoniamnist   seed 2   ~0.3 h
+   pneumoniamnist   seed 3   ~0.3 h
+   pneumoniamnist   seed 4   ~0.3 h
+   retinamnist      seed 0   ~0.1 h
+   retinamnist      seed 1   ~0.1 h
+   retinamnist      seed 2   ~0.1 h
+   retinamnist      seed 3   ~0.1 h
+   retinamnist      seed 4   ~0.1 h
+   breastmnist      seed 0   ~0.0 h
+   breastmnist      seed 1   ~0.0 h
+   breastmnist      seed 2   ~0.0 h
+   breastmnist      seed 3   ~0.0 h
+   breastmnist      seed 4   ~0.0 h
+   estimated total (2D on a T4, plus 3D if --ips3d given): 237 h
+[queue] 062e058f90c2:14023 -> joint_p3_2d seed 0
+[joint_p3_2d] mixed precision: bfloat16
+[joint_p3_2d] old checkpoint has a different architecture - moved aside, starting fresh
+[start] joint_p3_2d: 12 tasks, 100 rounds, cap 300 it/task | pathmnist:89996, chestmnist:78468, dermamnist:7007, octmnist:97477, pneumoniamnist:4708, retinamnist:1080, breastmnist:546, bloodmnist:11959, tissuemnist:165466, organamnist:34561, organcmnist:12975, organsmnist:13932
+joint_p3_2d round   1/100 | mean val AUC student 0.5606 teacher 0.5020 | best 0.5606 (r1, student) | 11.1 min
+joint_p3_2d round   2/100 | mean val AUC student 0.6033 teacher 0.5033 | best 0.6033 (r2, student) | 7.1 min
+joint_p3_2d round   3/100 | mean val AUC student 0.6441 teacher 0.5494 | best 0.6441 (r3, student) | 7.1 min
+joint_p3_2d round   4/100 | mean val AUC student 0.5447 teacher 0.5811 | best 0.6441 (r3, student) | 7.1 min
+joint_p3_2d round   5/100 | mean val AUC student 0.5592 teacher 0.4950 | best 0.6441 (r3, student) | 7.1 min
+93 jobs to run (0 already finished in out):
+   joint_p4         seed 0   ~29.2 h
+   joint_p3_2d      seed 0   ~24.2 h
+   tissuemnist      seed 0   ~11.4 h
+   tissuemnist      seed 1   ~11.4 h
+   tissuemnist      seed 2   ~11.4 h
+   tissuemnist      seed 3   ~11.4 h
+   tissuemnist      seed 4   ~11.4 h
+   octmnist         seed 0   ~6.7 h
+   octmnist         seed 1   ~6.7 h
+   octmnist         seed 2   ~6.7 h
+   octmnist         seed 3   ~6.7 h
+   octmnist         seed 4   ~6.7 h
+   pathmnist        seed 0   ~6.2 h
+   pathmnist        seed 1   ~6.2 h
+   pathmnist        seed 2   ~6.2 h
+   pathmnist        seed 3   ~6.2 h
+   pathmnist        seed 4   ~6.2 h
+   chestmnist       seed 0   ~5.4 h
+   chestmnist       seed 1   ~5.4 h
+   chestmnist       seed 2   ~5.4 h
+   chestmnist       seed 3   ~5.4 h
+   chestmnist       seed 4   ~5.4 h
+   joint_p3_3d      seed 0   ~5.0 h
+   organamnist      seed 0   ~2.4 h
+   organamnist      seed 1   ~2.4 h
+   organamnist      seed 2   ~2.4 h
+   organamnist      seed 3   ~2.4 h
+   organamnist      seed 4   ~2.4 h
+   organmnist3d     seed 0   (3D: estimate unknown)
+   organmnist3d     seed 1   (3D: estimate unknown)
+   organmnist3d     seed 2   (3D: estimate unknown)
+   organmnist3d     seed 3   (3D: estimate unknown)
+   organmnist3d     seed 4   (3D: estimate unknown)
+   nodulemnist3d    seed 0   (3D: estimate unknown)
+   nodulemnist3d    seed 1   (3D: estimate unknown)
+   nodulemnist3d    seed 2   (3D: estimate unknown)
+   nodulemnist3d    seed 3   (3D: estimate unknown)
+   nodulemnist3d    seed 4   (3D: estimate unknown)
+   fracturemnist3d  seed 0   (3D: estimate unknown)
+   fracturemnist3d  seed 1   (3D: estimate unknown)
+   fracturemnist3d  seed 2   (3D: estimate unknown)
+   fracturemnist3d  seed 3   (3D: estimate unknown)
+   fracturemnist3d  seed 4   (3D: estimate unknown)
+   adrenalmnist3d   seed 0   (3D: estimate unknown)
+   adrenalmnist3d   seed 1   (3D: estimate unknown)
+   adrenalmnist3d   seed 2   (3D: estimate unknown)
+   adrenalmnist3d   seed 3   (3D: estimate unknown)
+   adrenalmnist3d   seed 4   (3D: estimate unknown)
+   vesselmnist3d    seed 0   (3D: estimate unknown)
+   vesselmnist3d    seed 1   (3D: estimate unknown)
+   vesselmnist3d    seed 2   (3D: estimate unknown)
+   vesselmnist3d    seed 3   (3D: estimate unknown)
+   vesselmnist3d    seed 4   (3D: estimate unknown)
+   synapsemnist3d   seed 0   (3D: estimate unknown)
+   synapsemnist3d   seed 1   (3D: estimate unknown)
+   synapsemnist3d   seed 2   (3D: estimate unknown)
+   synapsemnist3d   seed 3   (3D: estimate unknown)
+   synapsemnist3d   seed 4   (3D: estimate unknown)
+   organsmnist      seed 0   ~1.0 h
+   organsmnist      seed 1   ~1.0 h
+   organsmnist      seed 2   ~1.0 h
+   organsmnist      seed 3   ~1.0 h
+   organsmnist      seed 4   ~1.0 h
+   organcmnist      seed 0   ~0.9 h
+   organcmnist      seed 1   ~0.9 h
+   organcmnist      seed 2   ~0.9 h
+   organcmnist      seed 3   ~0.9 h
+   organcmnist      seed 4   ~0.9 h
+   bloodmnist       seed 0   ~0.8 h
+   bloodmnist       seed 1   ~0.8 h
+   bloodmnist       seed 2   ~0.8 h
+   bloodmnist       seed 3   ~0.8 h
+   bloodmnist       seed 4   ~0.8 h
+   dermamnist       seed 0   ~0.5 h
+   dermamnist       seed 1   ~0.5 h
+   dermamnist       seed 2   ~0.5 h
+   dermamnist       seed 3   ~0.5 h
+   dermamnist       seed 4   ~0.5 h
+   pneumoniamnist   seed 0   ~0.3 h
+   pneumoniamnist   seed 1   ~0.3 h
+   pneumoniamnist   seed 2   ~0.3 h
+   pneumoniamnist   seed 3   ~0.3 h
+   pneumoniamnist   seed 4   ~0.3 h
+   retinamnist      seed 0   ~0.1 h
+   retinamnist      seed 1   ~0.1 h
+   retinamnist      seed 2   ~0.1 h
+   retinamnist      seed 3   ~0.1 h
+   retinamnist      seed 4   ~0.1 h
+   breastmnist      seed 0   ~0.0 h
+   breastmnist      seed 1   ~0.0 h
+   breastmnist      seed 2   ~0.0 h
+   breastmnist      seed 3   ~0.0 h
+   breastmnist      seed 4   ~0.0 h
+   estimated total (2D on a T4, plus 3D if --ips3d given): 237 h
+[queue] 062e058f90c2:19295 -> joint_p3_2d seed 0
+[joint_p3_2d] mixed precision: bfloat16
+[joint_p3_2d] old checkpoint has a different architecture or schedule - moved aside, starting fresh
+[start] joint_p3_2d: 12 tasks, 100 rounds, cap 300 it/task, interleaved | pathmnist:89996, chestmnist:78468, dermamnist:7007, octmnist:97477, pneumoniamnist:4708, retinamnist:1080, breastmnist:546, bloodmnist:11959, tissuemnist:165466, organamnist:34561, organcmnist:12975, organsmnist:13932
+joint_p3_2d round   1/100 | mean val AUC student 0.5000 teacher 0.5271 | best 0.5271 (r1, teacher) | worst: organcmnist 0.500 | 11.1 min
+joint_p3_2d round   2/100 | mean val AUC student 0.4993 teacher 0.6099 | best 0.6099 (r2, teacher) | worst: retinamnist 0.492 | 7.1 min
+joint_p3_2d round   3/100 | mean val AUC student 0.8213 teacher 0.6974 | best 0.8213 (r3, student) | worst: breastmnist 0.489 | 7.1 min
+joint_p3_2d round   4/100 | mean val AUC student 0.7464 teacher 0.7035 | best 0.8213 (r3, student) | worst: breastmnist 0.500 | 7.1 min
+joint_p3_2d round   5/100 | mean val AUC student 0.5879 teacher 0.6809 | best 0.8213 (r3, student) | worst: chestmnist 0.479 | 7.1 min
+joint_p3_2d round   6/100 | mean val AUC student 0.5725 teacher 0.8098 | best 0.8213 (r3, student) | worst: tissuemnist 0.421 | 7.1 min
+joint_p3_2d round   7/100 | mean val AUC student 0.7108 teacher 0.8481 | best 0.8481 (r7, teacher) | worst: retinamnist 0.547 | 7.1 min
+joint_p3_2d round   8/100 | mean val AUC student 0.6156 teacher 0.8424 | best 0.8481 (r7, teacher) | worst: retinamnist 0.504 | 7.1 min
+joint_p3_2d round   9/100 | mean val AUC student 0.6691 teacher 0.8460 | best 0.8481 (r7, teacher) | worst: octmnist 0.494 | 7.1 min
+joint_p3_2d round  10/100 | mean val AUC student 0.8724 teacher 0.8355 | best 0.8724 (r10, student) | worst: breastmnist 0.460 | 7.1 min
+93 jobs to run (0 already finished in out):
+   joint_p4         seed 0   ~29.2 h
+   joint_p3_2d      seed 0   ~24.2 h
+   tissuemnist      seed 0   ~11.4 h
+   tissuemnist      seed 1   ~11.4 h
+   tissuemnist      seed 2   ~11.4 h
+   tissuemnist      seed 3   ~11.4 h
+   tissuemnist      seed 4   ~11.4 h
+   octmnist         seed 0   ~6.7 h
+   octmnist         seed 1   ~6.7 h
+   octmnist         seed 2   ~6.7 h
+   octmnist         seed 3   ~6.7 h
+   octmnist         seed 4   ~6.7 h
+   pathmnist        seed 0   ~6.2 h
+   pathmnist        seed 1   ~6.2 h
+   pathmnist        seed 2   ~6.2 h
+   pathmnist        seed 3   ~6.2 h
+   pathmnist        seed 4   ~6.2 h
+   chestmnist       seed 0   ~5.4 h
+   chestmnist       seed 1   ~5.4 h
+   chestmnist       seed 2   ~5.4 h
+   chestmnist       seed 3   ~5.4 h
+   chestmnist       seed 4   ~5.4 h
+   joint_p3_3d      seed 0   ~5.0 h
+   organamnist      seed 0   ~2.4 h
+   organamnist      seed 1   ~2.4 h
+   organamnist      seed 2   ~2.4 h
+   organamnist      seed 3   ~2.4 h
+   organamnist      seed 4   ~2.4 h
+   organmnist3d     seed 0   (3D: estimate unknown)
+   organmnist3d     seed 1   (3D: estimate unknown)
+   organmnist3d     seed 2   (3D: estimate unknown)
+   organmnist3d     seed 3   (3D: estimate unknown)
+   organmnist3d     seed 4   (3D: estimate unknown)
+   nodulemnist3d    seed 0   (3D: estimate unknown)
+   nodulemnist3d    seed 1   (3D: estimate unknown)
+   nodulemnist3d    seed 2   (3D: estimate unknown)
+   nodulemnist3d    seed 3   (3D: estimate unknown)
+   nodulemnist3d    seed 4   (3D: estimate unknown)
+   fracturemnist3d  seed 0   (3D: estimate unknown)
+   fracturemnist3d  seed 1   (3D: estimate unknown)
+   fracturemnist3d  seed 2   (3D: estimate unknown)
+   fracturemnist3d  seed 3   (3D: estimate unknown)
+   fracturemnist3d  seed 4   (3D: estimate unknown)
+   adrenalmnist3d   seed 0   (3D: estimate unknown)
+   adrenalmnist3d   seed 1   (3D: estimate unknown)
+   adrenalmnist3d   seed 2   (3D: estimate unknown)
+   adrenalmnist3d   seed 3   (3D: estimate unknown)
+   adrenalmnist3d   seed 4   (3D: estimate unknown)
+   vesselmnist3d    seed 0   (3D: estimate unknown)
+   vesselmnist3d    seed 1   (3D: estimate unknown)
+   vesselmnist3d    seed 2   (3D: estimate unknown)
+   vesselmnist3d    seed 3   (3D: estimate unknown)
+   vesselmnist3d    seed 4   (3D: estimate unknown)
+   synapsemnist3d   seed 0   (3D: estimate unknown)
+   synapsemnist3d   seed 1   (3D: estimate unknown)
+   synapsemnist3d   seed 2   (3D: estimate unknown)
+   synapsemnist3d   seed 3   (3D: estimate unknown)
+   synapsemnist3d   seed 4   (3D: estimate unknown)
+   organsmnist      seed 0   ~1.0 h
+   organsmnist      seed 1   ~1.0 h
+   organsmnist      seed 2   ~1.0 h
+   organsmnist      seed 3   ~1.0 h
+   organsmnist      seed 4   ~1.0 h
+   organcmnist      seed 0   ~0.9 h
+   organcmnist      seed 1   ~0.9 h
+   organcmnist      seed 2   ~0.9 h
+   organcmnist      seed 3   ~0.9 h
+   organcmnist      seed 4   ~0.9 h
+   bloodmnist       seed 0   ~0.8 h
+   bloodmnist       seed 1   ~0.8 h
+   bloodmnist       seed 2   ~0.8 h
+   bloodmnist       seed 3   ~0.8 h
+   bloodmnist       seed 4   ~0.8 h
+   dermamnist       seed 0   ~0.5 h
+   dermamnist       seed 1   ~0.5 h
+   dermamnist       seed 2   ~0.5 h
+   dermamnist       seed 3   ~0.5 h
+   dermamnist       seed 4   ~0.5 h
+   pneumoniamnist   seed 0   ~0.3 h
+   pneumoniamnist   seed 1   ~0.3 h
+   pneumoniamnist   seed 2   ~0.3 h
+   pneumoniamnist   seed 3   ~0.3 h
+   pneumoniamnist   seed 4   ~0.3 h
+   retinamnist      seed 0   ~0.1 h
+   retinamnist      seed 1   ~0.1 h
+   retinamnist      seed 2   ~0.1 h
+   retinamnist      seed 3   ~0.1 h
+   retinamnist      seed 4   ~0.1 h
+   breastmnist      seed 0   ~0.0 h
+   breastmnist      seed 1   ~0.0 h
+   breastmnist      seed 2   ~0.0 h
+   breastmnist      seed 3   ~0.0 h
+   breastmnist      seed 4   ~0.0 h
+   estimated total (2D on a T4, plus 3D if --ips3d given): 237 h
+[queue] 062e058f90c2:29459 -> joint_p4 seed 0
+[joint_p4] mixed precision: bfloat16
+Traceback (most recent call last):
+  File "/workspace/kit/run_queue.py", line 167, in <module>
+    r = run_joint(f[len("joint_"):], a.out_dir, a.data_root, rounds=a.joint_rounds,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/kit/medmnist_joint.py", line 358, in run_joint
+    torch.set_rng_state(ck["rng_cpu"])
+  File "/usr/local/lib/python3.12/dist-packages/torch/random.py", line 19, in set_rng_state
+    default_generator.set_state(new_state)
+TypeError: RNG state must be a torch.ByteTensor
+[queue] CRASHED: joint_p4 seed 0 - see the traceback above; moving on
+[queue] joint_p4 seed 0 did NOT finish - continuing with the next job (re-run later to retry)
+[queue] 062e058f90c2:29459 -> joint_p3_2d seed 0
+[joint_p3_2d] mixed precision: bfloat16
+Traceback (most recent call last):
+  File "/workspace/kit/run_queue.py", line 167, in <module>
+    r = run_joint(f[len("joint_"):], a.out_dir, a.data_root, rounds=a.joint_rounds,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/kit/medmnist_joint.py", line 358, in run_joint
+    torch.set_rng_state(ck["rng_cpu"])
+  File "/usr/local/lib/python3.12/dist-packages/torch/random.py", line 19, in set_rng_state
+    default_generator.set_state(new_state)
+TypeError: RNG state must be a torch.ByteTensor
+[queue] CRASHED: joint_p3_2d seed 0 - see the traceback above; moving on
+[queue] joint_p3_2d seed 0 did NOT finish - continuing with the next job (re-run later to retry)
+[queue] 062e058f90c2:29459 -> octmnist seed 3
+[official] octmnist_seed3: /workspace/kit/official_repo/MedMNIST2D/train_and_eval_pytorch.py --data_flag octmnist --output_root /workspace/kit/out/official_runs/seed3 --num_epochs 100 --gpu_ids 0 --model_flag resnet50 --as_rgb --run seed3 --seed 3 --num_workers 7 --eval_every_epoch val --resize --batch_size 128 --amp
+octmnist_seed3 ep   1/100 loss 0.4999 val_auc 0.9240
+octmnist_seed3 ep   2/100 loss 0.3241 val_auc 0.9407
+octmnist_seed3 ep   3/100 loss 0.2855 val_auc 0.9552
+octmnist_seed3 ep   4/100 loss 0.2656 val_auc 0.9627
+93 jobs to run (0 already finished in out):
+   joint_p4         seed 0   ~29.2 h
+   joint_p3_2d      seed 0   ~24.2 h
+   tissuemnist      seed 0   ~11.4 h
+   tissuemnist      seed 1   ~11.4 h
+   tissuemnist      seed 2   ~11.4 h
+   tissuemnist      seed 3   ~11.4 h
+   tissuemnist      seed 4   ~11.4 h
+   octmnist         seed 0   ~6.7 h
+   octmnist         seed 1   ~6.7 h
+   octmnist         seed 2   ~6.7 h
+   octmnist         seed 3   ~6.7 h
+   octmnist         seed 4   ~6.7 h
+   pathmnist        seed 0   ~6.2 h
+   pathmnist        seed 1   ~6.2 h
+   pathmnist        seed 2   ~6.2 h
+   pathmnist        seed 3   ~6.2 h
+   pathmnist        seed 4   ~6.2 h
+   chestmnist       seed 0   ~5.4 h
+   chestmnist       seed 1   ~5.4 h
+   chestmnist       seed 2   ~5.4 h
+   chestmnist       seed 3   ~5.4 h
+   chestmnist       seed 4   ~5.4 h
+   joint_p3_3d      seed 0   ~5.0 h
+   organamnist      seed 0   ~2.4 h
+   organamnist      seed 1   ~2.4 h
+   organamnist      seed 2   ~2.4 h
+   organamnist      seed 3   ~2.4 h
+   organamnist      seed 4   ~2.4 h
+   organmnist3d     seed 0   (3D: estimate unknown)
+   organmnist3d     seed 1   (3D: estimate unknown)
+   organmnist3d     seed 2   (3D: estimate unknown)
+   organmnist3d     seed 3   (3D: estimate unknown)
+   organmnist3d     seed 4   (3D: estimate unknown)
+   nodulemnist3d    seed 0   (3D: estimate unknown)
+   nodulemnist3d    seed 1   (3D: estimate unknown)
+   nodulemnist3d    seed 2   (3D: estimate unknown)
+   nodulemnist3d    seed 3   (3D: estimate unknown)
+   nodulemnist3d    seed 4   (3D: estimate unknown)
+   fracturemnist3d  seed 0   (3D: estimate unknown)
+   fracturemnist3d  seed 1   (3D: estimate unknown)
+   fracturemnist3d  seed 2   (3D: estimate unknown)
+   fracturemnist3d  seed 3   (3D: estimate unknown)
+   fracturemnist3d  seed 4   (3D: estimate unknown)
+   adrenalmnist3d   seed 0   (3D: estimate unknown)
+   adrenalmnist3d   seed 1   (3D: estimate unknown)
+   adrenalmnist3d   seed 2   (3D: estimate unknown)
+   adrenalmnist3d   seed 3   (3D: estimate unknown)
+   adrenalmnist3d   seed 4   (3D: estimate unknown)
+   vesselmnist3d    seed 0   (3D: estimate unknown)
+   vesselmnist3d    seed 1   (3D: estimate unknown)
+   vesselmnist3d    seed 2   (3D: estimate unknown)
+   vesselmnist3d    seed 3   (3D: estimate unknown)
+   vesselmnist3d    seed 4   (3D: estimate unknown)
+   synapsemnist3d   seed 0   (3D: estimate unknown)
+   synapsemnist3d   seed 1   (3D: estimate unknown)
+   synapsemnist3d   seed 2   (3D: estimate unknown)
+   synapsemnist3d   seed 3   (3D: estimate unknown)
+   synapsemnist3d   seed 4   (3D: estimate unknown)
+   organsmnist      seed 0   ~1.0 h
+   organsmnist      seed 1   ~1.0 h
+   organsmnist      seed 2   ~1.0 h
+   organsmnist      seed 3   ~1.0 h
+   organsmnist      seed 4   ~1.0 h
+   organcmnist      seed 0   ~0.9 h
+   organcmnist      seed 1   ~0.9 h
+   organcmnist      seed 2   ~0.9 h
+   organcmnist      seed 3   ~0.9 h
+   organcmnist      seed 4   ~0.9 h
+   bloodmnist       seed 0   ~0.8 h
+   bloodmnist       seed 1   ~0.8 h
+   bloodmnist       seed 2   ~0.8 h
+   bloodmnist       seed 3   ~0.8 h
+   bloodmnist       seed 4   ~0.8 h
+   dermamnist       seed 0   ~0.5 h
+   dermamnist       seed 1   ~0.5 h
+   dermamnist       seed 2   ~0.5 h
+   dermamnist       seed 3   ~0.5 h
+   dermamnist       seed 4   ~0.5 h
+   pneumoniamnist   seed 0   ~0.3 h
+   pneumoniamnist   seed 1   ~0.3 h
+   pneumoniamnist   seed 2   ~0.3 h
+   pneumoniamnist   seed 3   ~0.3 h
+   pneumoniamnist   seed 4   ~0.3 h
+   retinamnist      seed 0   ~0.1 h
+   retinamnist      seed 1   ~0.1 h
+   retinamnist      seed 2   ~0.1 h
+   retinamnist      seed 3   ~0.1 h
+   retinamnist      seed 4   ~0.1 h
+   breastmnist      seed 0   ~0.0 h
+   breastmnist      seed 1   ~0.0 h
+   breastmnist      seed 2   ~0.0 h
+   breastmnist      seed 3   ~0.0 h
+   breastmnist      seed 4   ~0.0 h
+   estimated total (2D on a T4, plus 3D if --ips3d given): 237 h
+[queue] 062e058f90c2:31998 -> joint_p3_2d seed 0
+[joint_p3_2d] mixed precision: bfloat16
+[resume] joint_p3_2d from round 11/100 (best mean val AUC 0.8724)
+joint_p3_2d round  11/100 | mean val AUC student 0.8928 teacher 0.9163 | best 0.9163 (r11, teacher) | worst: chestmnist 0.658 | 11.6 min
+joint_p3_2d round  12/100 | mean val AUC student 0.9019 teacher 0.9187 | best 0.9187 (r12, teacher) | worst: chestmnist 0.664 | 7.6 min
+joint_p3_2d round  13/100 | mean val AUC student 0.8996 teacher 0.9200 | best 0.9200 (r13, teacher) | worst: chestmnist 0.657 | 7.6 min
+joint_p3_2d round  14/100 | mean val AUC student 0.8972 teacher 0.9171 | best 0.9200 (r13, teacher) | worst: chestmnist 0.666 | 7.6 min
+joint_p3_2d round  15/100 | mean val AUC student 0.8878 teacher 0.9199 | best 0.9200 (r13, teacher) | worst: chestmnist 0.634 | 7.6 min
+joint_p3_2d round  16/100 | mean val AUC student 0.8919 teacher 0.9213 | best 0.9213 (r16, teacher) | worst: chestmnist 0.667 | 7.6 min
+joint_p3_2d round  17/100 | mean val AUC student 0.9096 teacher 0.9241 | best 0.9241 (r17, teacher) | worst: chestmnist 0.672 | 7.6 min
+joint_p3_2d round  18/100 | mean val AUC student 0.8956 teacher 0.9260 | best 0.9260 (r18, teacher) | worst: chestmnist 0.660 | 7.6 min
+joint_p3_2d round  19/100 | mean val AUC student 0.8870 teacher 0.9273 | best 0.9273 (r19, teacher) | worst: chestmnist 0.660 | 7.6 min
+joint_p3_2d round  20/100 | mean val AUC student 0.9218 teacher 0.9158 | best 0.9273 (r19, teacher) | worst: chestmnist 0.702 | 7.6 min
+joint_p3_2d round  21/100 | mean val AUC student 0.9181 teacher 0.9273 | best 0.9273 (r19, teacher) | worst: chestmnist 0.703 | 7.6 min
+joint_p3_2d round  22/100 | mean val AUC student 0.8827 teacher 0.9275 | best 0.9275 (r22, teacher) | worst: chestmnist 0.640 | 7.6 min
+joint_p3_2d round  23/100 | mean val AUC student 0.9136 teacher 0.9295 | best 0.9295 (r23, teacher) | worst: chestmnist 0.696 | 7.6 min
+joint_p3_2d round  24/100 | mean val AUC student 0.9258 teacher 0.9323 | best 0.9323 (r24, teacher) | worst: chestmnist 0.706 | 7.6 min
+joint_p3_2d round  25/100 | mean val AUC student 0.9258 teacher 0.9336 | best 0.9336 (r25, teacher) | worst: chestmnist 0.713 | 7.6 min
+joint_p3_2d round  26/100 | mean val AUC student 0.9266 teacher 0.9347 | best 0.9347 (r26, teacher) | worst: chestmnist 0.718 | 7.6 min
+joint_p3_2d round  27/100 | mean val AUC student 0.8861 teacher 0.9353 | best 0.9353 (r27, teacher) | worst: chestmnist 0.678 | 7.6 min
+joint_p3_2d round  28/100 | mean val AUC student 0.9334 teacher 0.9370 | best 0.9370 (r28, teacher) | worst: chestmnist 0.721 | 7.6 min
+joint_p3_2d round  29/100 | mean val AUC student 0.9264 teacher 0.9377 | best 0.9377 (r29, teacher) | worst: chestmnist 0.719 | 7.6 min
+joint_p3_2d round  30/100 | mean val AUC student 0.9172 teacher 0.9392 | best 0.9392 (r30, teacher) | worst: chestmnist 0.727 | 7.6 min
+joint_p3_2d round  31/100 | mean val AUC student 0.9157 teacher 0.9401 | best 0.9401 (r31, teacher) | worst: chestmnist 0.698 | 7.6 min
+joint_p3_2d round  32/100 | mean val AUC student 0.9359 teacher 0.9397 | best 0.9401 (r31, teacher) | worst: chestmnist 0.732 | 7.6 min
+joint_p3_2d round  33/100 | mean val AUC student 0.9324 teacher 0.9395 | best 0.9401 (r31, teacher) | worst: chestmnist 0.730 | 7.6 min
+joint_p3_2d round  34/100 | mean val AUC student 0.9341 teacher 0.9405 | best 0.9405 (r34, teacher) | worst: chestmnist 0.740 | 7.6 min
+joint_p3_2d round  35/100 | mean val AUC student 0.9341 teacher 0.9412 | best 0.9412 (r35, teacher) | worst: chestmnist 0.731 | 7.6 min
+joint_p3_2d round  36/100 | mean val AUC student 0.9325 teacher 0.9427 | best 0.9427 (r36, teacher) | worst: chestmnist 0.739 | 7.6 min
+joint_p3_2d round  37/100 | mean val AUC student 0.9284 teacher 0.9403 | best 0.9427 (r36, teacher) | worst: chestmnist 0.734 | 7.6 min
+joint_p3_2d round  38/100 | mean val AUC student 0.9393 teacher 0.9423 | best 0.9427 (r36, teacher) | worst: chestmnist 0.742 | 7.6 min
+joint_p3_2d round  39/100 | mean val AUC student 0.9377 teacher 0.9430 | best 0.9430 (r39, teacher) | worst: chestmnist 0.734 | 7.6 min
+joint_p3_2d round  40/100 | mean val AUC student 0.9369 teacher 0.9439 | best 0.9439 (r40, teacher) | worst: chestmnist 0.744 | 7.6 min
+joint_p3_2d round  41/100 | mean val AUC student 0.9225 teacher 0.9426 | best 0.9439 (r40, teacher) | worst: chestmnist 0.714 | 7.6 min
+joint_p3_2d round  42/100 | mean val AUC student 0.9329 teacher 0.9408 | best 0.9439 (r40, teacher) | worst: retinamnist 0.726 | 7.6 min
+joint_p3_2d round  43/100 | mean val AUC student 0.9259 teacher 0.9399 | best 0.9439 (r40, teacher) | worst: chestmnist 0.730 | 7.6 min
+joint_p3_2d round  44/100 | mean val AUC student 0.9348 teacher 0.9394 | best 0.9439 (r40, teacher) | worst: chestmnist 0.734 | 7.6 min
+joint_p3_2d round  45/100 | mean val AUC student 0.9188 teacher 0.9411 | best 0.9439 (r40, teacher) | worst: chestmnist 0.728 | 7.6 min
+joint_p3_2d round  46/100 | mean val AUC student 0.9055 teacher 0.9415 | best 0.9439 (r40, teacher) | worst: chestmnist 0.712 | 7.6 min
+joint_p3_2d round  47/100 | mean val AUC student 0.9291 teacher 0.9398 | best 0.9439 (r40, teacher) | worst: chestmnist 0.729 | 7.6 min
+joint_p3_2d round  48/100 | mean val AUC student 0.9354 teacher 0.9420 | best 0.9439 (r40, teacher) | worst: chestmnist 0.748 | 7.6 min
+joint_p3_2d round  49/100 | mean val AUC student 0.9348 teacher 0.9427 | best 0.9439 (r40, teacher) | worst: retinamnist 0.746 | 7.6 min
+joint_p3_2d round  50/100 | mean val AUC student 0.9305 teacher 0.9417 | best 0.9439 (r40, teacher) | worst: chestmnist 0.744 | 7.6 min
+joint_p3_2d round  51/100 | mean val AUC student 0.9400 teacher 0.9412 | best 0.9439 (r40, teacher) | worst: chestmnist 0.757 | 7.6 min
+joint_p3_2d round  52/100 | mean val AUC student 0.9418 teacher 0.9407 | best 0.9439 (r40, teacher) | worst: chestmnist 0.759 | 7.6 min
+joint_p3_2d round  53/100 | mean val AUC student 0.9415 teacher 0.9416 | best 0.9439 (r40, teacher) | worst: chestmnist 0.760 | 7.6 min
+joint_p3_2d round  54/100 | mean val AUC student 0.9405 teacher 0.9413 | best 0.9439 (r40, teacher) | worst: chestmnist 0.760 | 7.6 min
+joint_p3_2d round  55/100 | mean val AUC student 0.9396 teacher 0.9415 | best 0.9439 (r40, teacher) | worst: chestmnist 0.761 | 7.6 min
+joint_p3_2d round  56/100 | mean val AUC student 0.9395 teacher 0.9414 | best 0.9439 (r40, teacher) | worst: chestmnist 0.761 | 7.6 min
+joint_p3_2d round  57/100 | mean val AUC student 0.9401 teacher 0.9410 | best 0.9439 (r40, teacher) | worst: chestmnist 0.761 | 7.6 min
+joint_p3_2d round  58/100 | mean val AUC student 0.9380 teacher 0.9405 | best 0.9439 (r40, teacher) | worst: retinamnist 0.755 | 7.6 min
+joint_p3_2d round  59/100 | mean val AUC student 0.9386 teacher 0.9398 | best 0.9439 (r40, teacher) | worst: chestmnist 0.762 | 7.6 min
+joint_p3_2d round  60/100 | mean val AUC student 0.9390 teacher 0.9399 | best 0.9439 (r40, teacher) | worst: chestmnist 0.762 | 7.6 min
+joint_p3_2d round  61/100 | mean val AUC student 0.9390 teacher 0.9398 | best 0.9439 (r40, teacher) | worst: retinamnist 0.761 | 7.6 min
+joint_p3_2d round  62/100 | mean val AUC student 0.9396 teacher 0.9399 | best 0.9439 (r40, teacher) | worst: chestmnist 0.762 | 7.6 min
+joint_p3_2d round  63/100 | mean val AUC student 0.9323 teacher 0.9393 | best 0.9439 (r40, teacher) | worst: retinamnist 0.692 | 7.6 min
+joint_p3_2d round  64/100 | mean val AUC student 0.9372 teacher 0.9393 | best 0.9439 (r40, teacher) | worst: retinamnist 0.748 | 7.6 min
+joint_p3_2d round  65/100 | mean val AUC student 0.9376 teacher 0.9391 | best 0.9439 (r40, teacher) | worst: retinamnist 0.754 | 7.6 min
+joint_p3_2d round  66/100 | mean val AUC student 0.9374 teacher 0.9388 | best 0.9439 (r40, teacher) | worst: retinamnist 0.749 | 7.6 min
+joint_p3_2d round  67/100 | mean val AUC student 0.9359 teacher 0.9382 | best 0.9439 (r40, teacher) | worst: retinamnist 0.735 | 7.6 min
+joint_p3_2d round  68/100 | mean val AUC student 0.9371 teacher 0.9386 | best 0.9439 (r40, teacher) | worst: retinamnist 0.748 | 7.6 min
+joint_p3_2d round  69/100 | mean val AUC student 0.9359 teacher 0.9377 | best 0.9439 (r40, teacher) | worst: retinamnist 0.737 | 7.6 min
+joint_p3_2d round  70/100 | mean val AUC student 0.9376 teacher 0.9378 | best 0.9439 (r40, teacher) | worst: retinamnist 0.753 | 7.6 min
+joint_p3_2d round  71/100 | mean val AUC student 0.9359 teacher 0.9374 | best 0.9439 (r40, teacher) | worst: retinamnist 0.740 | 7.6 min
+joint_p3_2d round  72/100 | mean val AUC student 0.9351 teacher 0.9374 | best 0.9439 (r40, teacher) | worst: retinamnist 0.727 | 7.6 min
+joint_p3_2d round  73/100 | mean val AUC student 0.9349 teacher 0.9378 | best 0.9439 (r40, teacher) | worst: retinamnist 0.725 | 7.6 min
+joint_p3_2d round  74/100 | mean val AUC student 0.9363 teacher 0.9373 | best 0.9439 (r40, teacher) | worst: retinamnist 0.747 | 7.6 min
+joint_p3_2d round  75/100 | mean val AUC student 0.9362 teacher 0.9365 | best 0.9439 (r40, teacher) | worst: retinamnist 0.742 | 7.6 min
+joint_p3_2d round  76/100 | mean val AUC student 0.9360 teacher 0.9371 | best 0.9439 (r40, teacher) | worst: retinamnist 0.738 | 7.6 min
+joint_p3_2d round  77/100 | mean val AUC student 0.9357 teacher 0.9371 | best 0.9439 (r40, teacher) | worst: retinamnist 0.742 | 7.6 min
+joint_p3_2d round  78/100 | mean val AUC student 0.9362 teacher 0.9368 | best 0.9439 (r40, teacher) | worst: retinamnist 0.742 | 7.6 min
+joint_p3_2d round  79/100 | mean val AUC student 0.9361 teacher 0.9372 | best 0.9439 (r40, teacher) | worst: retinamnist 0.742 | 7.6 min
+joint_p3_2d round  80/100 | mean val AUC student 0.9366 teacher 0.9371 | best 0.9439 (r40, teacher) | worst: retinamnist 0.742 | 7.6 min
+joint_p3_2d round  81/100 | mean val AUC student 0.9354 teacher 0.9370 | best 0.9439 (r40, teacher) | worst: retinamnist 0.741 | 7.6 min
+joint_p3_2d round  82/100 | mean val AUC student 0.9355 teacher 0.9366 | best 0.9439 (r40, teacher) | worst: retinamnist 0.741 | 7.6 min
+joint_p3_2d round  83/100 | mean val AUC student 0.9359 teacher 0.9363 | best 0.9439 (r40, teacher) | worst: retinamnist 0.736 | 7.6 min
+joint_p3_2d round  84/100 | mean val AUC student 0.9353 teacher 0.9359 | best 0.9439 (r40, teacher) | worst: retinamnist 0.740 | 7.6 min
+joint_p3_2d round  85/100 | mean val AUC student 0.9353 teacher 0.9368 | best 0.9439 (r40, teacher) | worst: retinamnist 0.735 | 7.6 min
+joint_p3_2d round  86/100 | mean val AUC student 0.9359 teacher 0.9367 | best 0.9439 (r40, teacher) | worst: retinamnist 0.740 | 7.6 min
+joint_p3_2d round  87/100 | mean val AUC student 0.9357 teacher 0.9370 | best 0.9439 (r40, teacher) | worst: retinamnist 0.737 | 7.6 min
+joint_p3_2d round  88/100 | mean val AUC student 0.9359 teacher 0.9366 | best 0.9439 (r40, teacher) | worst: retinamnist 0.742 | 7.6 min
+joint_p3_2d round  89/100 | mean val AUC student 0.9359 teacher 0.9360 | best 0.9439 (r40, teacher) | worst: retinamnist 0.736 | 7.6 min
+joint_p3_2d round  90/100 | mean val AUC student 0.9364 teacher 0.9364 | best 0.9439 (r40, teacher) | worst: retinamnist 0.738 | 7.6 min
+joint_p3_2d round  91/100 | mean val AUC student 0.9358 teacher 0.9364 | best 0.9439 (r40, teacher) | worst: retinamnist 0.740 | 7.6 min
+joint_p3_2d round  92/100 | mean val AUC student 0.9357 teacher 0.9361 | best 0.9439 (r40, teacher) | worst: retinamnist 0.736 | 7.6 min
+joint_p3_2d round  93/100 | mean val AUC student 0.9360 teacher 0.9362 | best 0.9439 (r40, teacher) | worst: retinamnist 0.738 | 7.6 min
+joint_p3_2d round  94/100 | mean val AUC student 0.9352 teacher 0.9363 | best 0.9439 (r40, teacher) | worst: retinamnist 0.734 | 7.6 min
+joint_p3_2d round  95/100 | mean val AUC student 0.9358 teacher 0.9363 | best 0.9439 (r40, teacher) | worst: retinamnist 0.738 | 7.6 min
+joint_p3_2d round  96/100 | mean val AUC student 0.9355 teacher 0.9359 | best 0.9439 (r40, teacher) | worst: retinamnist 0.736 | 7.6 min
+joint_p3_2d round  97/100 | mean val AUC student 0.9358 teacher 0.9361 | best 0.9439 (r40, teacher) | worst: retinamnist 0.733 | 7.6 min
+joint_p3_2d round  98/100 | mean val AUC student 0.9350 teacher 0.9360 | best 0.9439 (r40, teacher) | worst: retinamnist 0.733 | 7.6 min
+joint_p3_2d round  99/100 | mean val AUC student 0.9360 teacher 0.9361 | best 0.9439 (r40, teacher) | worst: retinamnist 0.740 | 7.6 min
+joint_p3_2d round 100/100 | mean val AUC student 0.9360 teacher 0.9363 | best 0.9439 (r40, teacher) | worst: retinamnist 0.735 | 7.6 min
+   pathmnist        test AUC 0.9747  ACC 0.8591   (paper ResNet-50: 0.989)
+   chestmnist       test AUC 0.7547  ACC 0.9476   (paper ResNet-50: 0.773)
+   dermamnist       test AUC 0.9322  ACC 0.7661   (paper ResNet-50: 0.912)
+   octmnist         test AUC 0.9562  ACC 0.7490   (paper ResNet-50: 0.958)
+   pneumoniamnist   test AUC 0.9703  ACC 0.8686   (paper ResNet-50: 0.962)
+   retinamnist      test AUC 0.7113  ACC 0.5325   (paper ResNet-50: 0.716)
+   breastmnist      test AUC 0.9111  ACC 0.8910   (paper ResNet-50: 0.866)
+   bloodmnist       test AUC 0.9977  ACC 0.9564   (paper ResNet-50: 0.997)
+   tissuemnist      test AUC 0.9289  ACC 0.6782   (paper ResNet-50: 0.932)
+   organamnist      test AUC 0.9960  ACC 0.9310   (paper ResNet-50: 0.998)
+   organcmnist      test AUC 0.9954  ACC 0.9254   (paper ResNet-50: 0.993)
+   organsmnist      test AUC 0.9781  ACC 0.8048   (paper ResNet-50: 0.975)
+[done] joint_p3_2d: best round 40 (teacher), mean test AUC 0.9255
+[queue] 062e058f90c2:31998 -> synapsemnist3d seed 0
+[official] synapsemnist3d_seed0: /workspace/kit/official_repo/MedMNIST3D/train_and_eval_pytorch.py --data_flag synapsemnist3d --output_root /workspace/kit/out/official_runs/seed0 --num_epochs 100 --gpu_ids 0 --model_flag resnet50 --as_rgb --run seed0 --seed 0 --num_workers 7 --eval_every_epoch val --conv Conv3d --batch_size 32 --amp
+synapsemnist3d_seed0 ep   1/100 loss 0.8741 val_auc 0.4153
+synapsemnist3d_seed0 ep   2/100 loss 0.6046 val_auc 0.6882
+synapsemnist3d_seed0 ep   3/100 loss 0.6025 val_auc 0.5846
+synapsemnist3d_seed0 ep   4/100 loss 0.6130 val_auc 0.6885
+synapsemnist3d_seed0 ep   5/100 loss 0.5144 val_auc 0.7117
+synapsemnist3d_seed0 ep   6/100 loss 0.4842 val_auc 0.5857
+synapsemnist3d_seed0 ep   7/100 loss 0.4466 val_auc 0.7271
+synapsemnist3d_seed0 ep   8/100 loss 0.4642 val_auc 0.6429
+synapsemnist3d_seed0 ep   9/100 loss 0.4148 val_auc 0.6927
+synapsemnist3d_seed0 ep  10/100 loss 0.3939 val_auc 0.7679
+synapsemnist3d_seed0 ep  11/100 loss 0.3529 val_auc 0.8508
+synapsemnist3d_seed0 ep  12/100 loss 0.3336 val_auc 0.8485
+synapsemnist3d_seed0 ep  13/100 loss 0.2737 val_auc 0.8329
+synapsemnist3d_seed0 ep  14/100 loss 0.2750 val_auc 0.8282
+synapsemnist3d_seed0 ep  15/100 loss 0.3190 val_auc 0.6925
+synapsemnist3d_seed0 ep  16/100 loss 0.2559 val_auc 0.8671
+synapsemnist3d_seed0 ep  17/100 loss 0.2465 val_auc 0.8878
+synapsemnist3d_seed0 ep  18/100 loss 0.1847 val_auc 0.8844
+synapsemnist3d_seed0 ep  19/100 loss 0.1786 val_auc 0.8434
+synapsemnist3d_seed0 ep  20/100 loss 0.1128 val_auc 0.8613
+synapsemnist3d_seed0 ep  21/100 loss 0.1172 val_auc 0.8158
+synapsemnist3d_seed0 ep  22/100 loss 0.1265 val_auc 0.8979
+synapsemnist3d_seed0 ep  23/100 loss 0.1203 val_auc 0.8790
+synapsemnist3d_seed0 ep  24/100 loss 0.0802 val_auc 0.8660
+synapsemnist3d_seed0 ep  25/100 loss 0.0803 val_auc 0.9126
+synapsemnist3d_seed0 ep  26/100 loss 0.0883 val_auc 0.8826
+synapsemnist3d_seed0 ep  27/100 loss 0.0619 val_auc 0.8524
+synapsemnist3d_seed0 ep  28/100 loss 0.0375 val_auc 0.9393
+synapsemnist3d_seed0 ep  29/100 loss 0.1135 val_auc 0.8647
+synapsemnist3d_seed0 ep  30/100 loss 0.1739 val_auc 0.8891
+synapsemnist3d_seed0 ep  31/100 loss 0.0494 val_auc 0.8576
+synapsemnist3d_seed0 ep  32/100 loss 0.0579 val_auc 0.8905
+synapsemnist3d_seed0 ep  33/100 loss 0.0178 val_auc 0.8768
+synapsemnist3d_seed0 ep  34/100 loss 0.0336 val_auc 0.8882
+synapsemnist3d_seed0 ep  35/100 loss 0.0831 val_auc 0.8396
+synapsemnist3d_seed0 ep  36/100 loss 0.0482 val_auc 0.8816
+synapsemnist3d_seed0 ep  37/100 loss 0.0256 val_auc 0.8536
+synapsemnist3d_seed0 ep  38/100 loss 0.0232 val_auc 0.8719
+synapsemnist3d_seed0 ep  39/100 loss 0.0126 val_auc 0.8797
+synapsemnist3d_seed0 ep  40/100 loss 0.0079 val_auc 0.9037
+synapsemnist3d_seed0 ep  41/100 loss 0.0133 val_auc 0.8970
+synapsemnist3d_seed0 ep  42/100 loss 0.0509 val_auc 0.8398
+synapsemnist3d_seed0 ep  43/100 loss 0.0518 val_auc 0.8816
+synapsemnist3d_seed0 ep  44/100 loss 0.0160 val_auc 0.9241
+synapsemnist3d_seed0 ep  45/100 loss 0.0191 val_auc 0.9212
+synapsemnist3d_seed0 ep  46/100 loss 0.0470 val_auc 0.8999
+synapsemnist3d_seed0 ep  47/100 loss 0.0222 val_auc 0.9071
+synapsemnist3d_seed0 ep  48/100 loss 0.0071 val_auc 0.9369
+synapsemnist3d_seed0 ep  49/100 loss 0.0022 val_auc 0.9188
+synapsemnist3d_seed0 ep  50/100 loss 0.0012 val_auc 0.9246
+synapsemnist3d_seed0 ep  51/100 loss 0.0006 val_auc 0.9260
+synapsemnist3d_seed0 ep  52/100 loss 0.0006 val_auc 0.9264
+synapsemnist3d_seed0 ep  53/100 loss 0.0006 val_auc 0.9271
+synapsemnist3d_seed0 ep  54/100 loss 0.0009 val_auc 0.9257
+synapsemnist3d_seed0 ep  55/100 loss 0.0010 val_auc 0.9254
+synapsemnist3d_seed0 ep  56/100 loss 0.0008 val_auc 0.9259
+synapsemnist3d_seed0 ep  57/100 loss 0.0003 val_auc 0.9260
+synapsemnist3d_seed0 ep  58/100 loss 0.0004 val_auc 0.9260
+synapsemnist3d_seed0 ep  59/100 loss 0.0005 val_auc 0.9276
+synapsemnist3d_seed0 ep  60/100 loss 0.0004 val_auc 0.9281
+synapsemnist3d_seed0 ep  61/100 loss 0.0003 val_auc 0.9286
+synapsemnist3d_seed0 ep  62/100 loss 0.0003 val_auc 0.9277
+synapsemnist3d_seed0 ep  63/100 loss 0.0002 val_auc 0.9274
+synapsemnist3d_seed0 ep  64/100 loss 0.0008 val_auc 0.9269
+synapsemnist3d_seed0 ep  65/100 loss 0.0005 val_auc 0.9281
+synapsemnist3d_seed0 ep  66/100 loss 0.0001 val_auc 0.9277
+synapsemnist3d_seed0 ep  67/100 loss 0.0010 val_auc 0.9309
+synapsemnist3d_seed0 ep  68/100 loss 0.0005 val_auc 0.9296
+synapsemnist3d_seed0 ep  69/100 loss 0.0003 val_auc 0.9250
+synapsemnist3d_seed0 ep  70/100 loss 0.0002 val_auc 0.9288
+synapsemnist3d_seed0 ep  71/100 loss 0.0002 val_auc 0.9249
+synapsemnist3d_seed0 ep  72/100 loss 0.0002 val_auc 0.9299
+synapsemnist3d_seed0 ep  73/100 loss 0.0004 val_auc 0.9245
+synapsemnist3d_seed0 ep  74/100 loss 0.0001 val_auc 0.9285
+synapsemnist3d_seed0 ep  75/100 loss 0.0002 val_auc 0.9286
+synapsemnist3d_seed0 ep  76/100 loss 0.0002 val_auc 0.9285
+synapsemnist3d_seed0 ep  77/100 loss 0.0002 val_auc 0.9293
+synapsemnist3d_seed0 ep  78/100 loss 0.0002 val_auc 0.9290
+synapsemnist3d_seed0 ep  79/100 loss 0.0001 val_auc 0.9281
+synapsemnist3d_seed0 ep  80/100 loss 0.0002 val_auc 0.9290
+synapsemnist3d_seed0 ep  81/100 loss 0.0003 val_auc 0.9288
+synapsemnist3d_seed0 ep  82/100 loss 0.0002 val_auc 0.9250
+synapsemnist3d_seed0 ep  83/100 loss 0.0003 val_auc 0.9294
+synapsemnist3d_seed0 ep  84/100 loss 0.0001 val_auc 0.9290
+synapsemnist3d_seed0 ep  85/100 loss 0.0005 val_auc 0.9297
+synapsemnist3d_seed0 ep  86/100 loss 0.0002 val_auc 0.9304
+synapsemnist3d_seed0 ep  87/100 loss 0.0015 val_auc 0.9296
+synapsemnist3d_seed0 ep  88/100 loss 0.0003 val_auc 0.9248
+synapsemnist3d_seed0 ep  89/100 loss 0.0002 val_auc 0.9302
+synapsemnist3d_seed0 ep  90/100 loss 0.0003 val_auc 0.9302
+synapsemnist3d_seed0 ep  91/100 loss 0.0002 val_auc 0.9247
+synapsemnist3d_seed0 ep  92/100 loss 0.0002 val_auc 0.9287
+synapsemnist3d_seed0 ep  93/100 loss 0.0002 val_auc 0.9301
+synapsemnist3d_seed0 ep  94/100 loss 0.0003 val_auc 0.9302
+synapsemnist3d_seed0 ep  95/100 loss 0.0002 val_auc 0.9247
+synapsemnist3d_seed0 ep  96/100 loss 0.0001 val_auc 0.9292
+synapsemnist3d_seed0 ep  97/100 loss 0.0002 val_auc 0.9304
+synapsemnist3d_seed0 ep  98/100 loss 0.0002 val_auc 0.9293
+synapsemnist3d_seed0 ep  99/100 loss 0.0002 val_auc 0.9300
+synapsemnist3d_seed0 ep 100/100 loss 0.0003 val_auc 0.9310
+[done] synapsemnist3d_seed0: best epoch 28 | test AUC 0.8632 (paper 0.851) | ACC 0.8239 (paper 0.795) | 15 min
+[queue] 062e058f90c2:31998 -> organsmnist seed 3
+[official] organsmnist_seed3: /workspace/kit/official_repo/MedMNIST2D/train_and_eval_pytorch.py --data_flag organsmnist --output_root /workspace/kit/out/official_runs/seed3 --num_epochs 100 --gpu_ids 0 --model_flag resnet50 --as_rgb --run seed3 --seed 3 --num_workers 7 --eval_every_epoch val --resize --batch_size 128 --amp
+organsmnist_seed3 ep   1/100 loss 1.0479 val_auc 0.9241
+organsmnist_seed3 ep   2/100 loss 0.5586 val_auc 0.9888
+organsmnist_seed3 ep   3/100 loss 0.4328 val_auc 0.9901
+organsmnist_seed3 ep   4/100 loss 0.3398 val_auc 0.9888
+organsmnist_seed3 ep   5/100 loss 0.2961 val_auc 0.9906
+organsmnist_seed3 ep   6/100 loss 0.2604 val_auc 0.9932
+organsmnist_seed3 ep   7/100 loss 0.2338 val_auc 0.9922
+organsmnist_seed3 ep   8/100 loss 0.2047 val_auc 0.9920
+organsmnist_seed3 ep   9/100 loss 0.1778 val_auc 0.9885
+organsmnist_seed3 ep  10/100 loss 0.1625 val_auc 0.9917
+organsmnist_seed3 ep  11/100 loss 0.1453 val_auc 0.9931
+organsmnist_seed3 ep  12/100 loss 0.1338 val_auc 0.9933
+organsmnist_seed3 ep  13/100 loss 0.1545 val_auc 0.9897
+organsmnist_seed3 ep  14/100 loss 0.1472 val_auc 0.9916
+organsmnist_seed3 ep  15/100 loss 0.0885 val_auc 0.9932
+organsmnist_seed3 ep  16/100 loss 0.0822 val_auc 0.9931
+organsmnist_seed3 ep  17/100 loss 0.1072 val_auc 0.9929
+organsmnist_seed3 ep  18/100 loss 0.0910 val_auc 0.9935
+organsmnist_seed3 ep  19/100 loss 0.0728 val_auc 0.9938
+organsmnist_seed3 ep  20/100 loss 0.0719 val_auc 0.9913
+organsmnist_seed3 ep  21/100 loss 0.0774 val_auc 0.9901
+organsmnist_seed3 ep  22/100 loss 0.0714 val_auc 0.9928
+organsmnist_seed3 ep  23/100 loss 0.0752 val_auc 0.9915
+organsmnist_seed3 ep  24/100 loss 0.0539 val_auc 0.9933
+organsmnist_seed3 ep  25/100 loss 0.0703 val_auc 0.9937
+organsmnist_seed3 ep  26/100 loss 0.0417 val_auc 0.9901
+organsmnist_seed3 ep  27/100 loss 0.0544 val_auc 0.9912
+organsmnist_seed3 ep  28/100 loss 0.0448 val_auc 0.9930
+organsmnist_seed3 ep  29/100 loss 0.0432 val_auc 0.9929
+organsmnist_seed3 ep  30/100 loss 0.0274 val_auc 0.9922
+organsmnist_seed3 ep  31/100 loss 0.0278 val_auc 0.9929
+organsmnist_seed3 ep  32/100 loss 0.0181 val_auc 0.9930
+organsmnist_seed3 ep  33/100 loss 0.0133 val_auc 0.9923
+organsmnist_seed3 ep  34/100 loss 0.0974 val_auc 0.9900
+organsmnist_seed3 ep  35/100 loss 0.0374 val_auc 0.9923
+organsmnist_seed3 ep  36/100 loss 0.0134 val_auc 0.9928
+organsmnist_seed3 ep  37/100 loss 0.0268 val_auc 0.9904
+organsmnist_seed3 ep  38/100 loss 0.0310 val_auc 0.9914
+organsmnist_seed3 ep  39/100 loss 0.0230 val_auc 0.9922
+organsmnist_seed3 ep  40/100 loss 0.0348 val_auc 0.9923
+organsmnist_seed3 ep  41/100 loss 0.0315 val_auc 0.9930
+organsmnist_seed3 ep  42/100 loss 0.0256 val_auc 0.9903
+organsmnist_seed3 ep  43/100 loss 0.0258 val_auc 0.9930
+organsmnist_seed3 ep  44/100 loss 0.0099 val_auc 0.9927
+organsmnist_seed3 ep  45/100 loss 0.0070 val_auc 0.9922
+organsmnist_seed3 ep  46/100 loss 0.0071 val_auc 0.9928
+organsmnist_seed3 ep  47/100 loss 0.0075 val_auc 0.9919
+organsmnist_seed3 ep  48/100 loss 0.0598 val_auc 0.9893
+organsmnist_seed3 ep  49/100 loss 0.0510 val_auc 0.9921
+organsmnist_seed3 ep  50/100 loss 0.0112 val_auc 0.9925
+organsmnist_seed3 ep  51/100 loss 0.0034 val_auc 0.9933
+organsmnist_seed3 ep  52/100 loss 0.0013 val_auc 0.9934
+organsmnist_seed3 ep  53/100 loss 0.0008 val_auc 0.9934
+organsmnist_seed3 ep  54/100 loss 0.0008 val_auc 0.9936
+organsmnist_seed3 ep  55/100 loss 0.0005 val_auc 0.9936
+organsmnist_seed3 ep  56/100 loss 0.0005 val_auc 0.9935
+organsmnist_seed3 ep  57/100 loss 0.0004 val_auc 0.9935
+organsmnist_seed3 ep  58/100 loss 0.0004 val_auc 0.9935
+organsmnist_seed3 ep  59/100 loss 0.0003 val_auc 0.9936
+organsmnist_seed3 ep  60/100 loss 0.0003 val_auc 0.9936
+organsmnist_seed3 ep  61/100 loss 0.0003 val_auc 0.9935
+organsmnist_seed3 ep  62/100 loss 0.0002 val_auc 0.9936
+organsmnist_seed3 ep  63/100 loss 0.0003 val_auc 0.9935
+organsmnist_seed3 ep  64/100 loss 0.0003 val_auc 0.9935
+organsmnist_seed3 ep  65/100 loss 0.0002 val_auc 0.9936
+organsmnist_seed3 ep  66/100 loss 0.0002 val_auc 0.9936
+organsmnist_seed3 ep  67/100 loss 0.0002 val_auc 0.9935
+organsmnist_seed3 ep  68/100 loss 0.0002 val_auc 0.9935
+organsmnist_seed3 ep  69/100 loss 0.0002 val_auc 0.9936
+organsmnist_seed3 ep  70/100 loss 0.0001 val_auc 0.9935
+organsmnist_seed3 ep  71/100 loss 0.0002 val_auc 0.9935
+organsmnist_seed3 ep  72/100 loss 0.0001 val_auc 0.9934
+organsmnist_seed3 ep  73/100 loss 0.0001 val_auc 0.9935
+organsmnist_seed3 ep  74/100 loss 0.0001 val_auc 0.9935
+organsmnist_seed3 ep  75/100 loss 0.0001 val_auc 0.9936
+organsmnist_seed3 ep  76/100 loss 0.0001 val_auc 0.9934
+organsmnist_seed3 ep  77/100 loss 0.0001 val_auc 0.9935
+organsmnist_seed3 ep  78/100 loss 0.0002 val_auc 0.9934
+organsmnist_seed3 ep  79/100 loss 0.0001 val_auc 0.9935
+organsmnist_seed3 ep  80/100 loss 0.0001 val_auc 0.9935
+organsmnist_seed3 ep  81/100 loss 0.0001 val_auc 0.9935
+organsmnist_seed3 ep  82/100 loss 0.0001 val_auc 0.9935
+organsmnist_seed3 ep  83/100 loss 0.0001 val_auc 0.9936
+organsmnist_seed3 ep  84/100 loss 0.0001 val_auc 0.9935
+organsmnist_seed3 ep  85/100 loss 0.0001 val_auc 0.9936
+organsmnist_seed3 ep  86/100 loss 0.0001 val_auc 0.9934
+organsmnist_seed3 ep  87/100 loss 0.0001 val_auc 0.9935
+organsmnist_seed3 ep  88/100 loss 0.0001 val_auc 0.9936
+organsmnist_seed3 ep  89/100 loss 0.0001 val_auc 0.9934
+organsmnist_seed3 ep  90/100 loss 0.0001 val_auc 0.9935
+organsmnist_seed3 ep  91/100 loss 0.0001 val_auc 0.9935
+organsmnist_seed3 ep  92/100 loss 0.0001 val_auc 0.9935
+organsmnist_seed3 ep  93/100 loss 0.0001 val_auc 0.9936
+organsmnist_seed3 ep  94/100 loss 0.0001 val_auc 0.9935
+organsmnist_seed3 ep  95/100 loss 0.0001 val_auc 0.9936
+organsmnist_seed3 ep  96/100 loss 0.0001 val_auc 0.9935
+organsmnist_seed3 ep  97/100 loss 0.0001 val_auc 0.9936
+organsmnist_seed3 ep  98/100 loss 0.0001 val_auc 0.9936
+organsmnist_seed3 ep  99/100 loss 0.0001 val_auc 0.9936
+organsmnist_seed3 ep 100/100 loss 0.0001 val_auc 0.9935
+[done] organsmnist_seed3: best epoch 19 | test AUC 0.9691 (paper 0.975) | ACC 0.7556 (paper 0.785) | 38 min
+[queue] 062e058f90c2:31998 -> bloodmnist seed 1
+[official] bloodmnist_seed1: /workspace/kit/official_repo/MedMNIST2D/train_and_eval_pytorch.py --data_flag bloodmnist --output_root /workspace/kit/out/official_runs/seed1 --num_epochs 100 --gpu_ids 0 --model_flag resnet50 --as_rgb --run seed1 --seed 1 --num_workers 7 --eval_every_epoch val --resize --batch_size 128 --amp
+bloodmnist_seed1 ep   1/100 loss 0.6694 val_auc 0.9802
+bloodmnist_seed1 ep   2/100 loss 0.3207 val_auc 0.9850
+bloodmnist_seed1 ep   3/100 loss 0.2853 val_auc 0.9843
+bloodmnist_seed1 ep   4/100 loss 0.2181 val_auc 0.9846
+bloodmnist_seed1 ep   5/100 loss 0.2140 val_auc 0.9768
+bloodmnist_seed1 ep   6/100 loss 0.1788 val_auc 0.9645
+bloodmnist_seed1 ep   7/100 loss 0.1509 val_auc 0.9919
+bloodmnist_seed1 ep   8/100 loss 0.1470 val_auc 0.9928
+bloodmnist_seed1 ep   9/100 loss 0.1320 val_auc 0.9942
+bloodmnist_seed1 ep  10/100 loss 0.1119 val_auc 0.9950
+bloodmnist_seed1 ep  11/100 loss 0.1090 val_auc 0.9933
+bloodmnist_seed1 ep  12/100 loss 0.1082 val_auc 0.9740
+bloodmnist_seed1 ep  13/100 loss 0.1056 val_auc 0.9942
+bloodmnist_seed1 ep  14/100 loss 0.0895 val_auc 0.9969
+bloodmnist_seed1 ep  15/100 loss 0.0887 val_auc 0.9955
+bloodmnist_seed1 ep  16/100 loss 0.0605 val_auc 0.9860
+bloodmnist_seed1 ep  17/100 loss 0.0636 val_auc 0.9927
+bloodmnist_seed1 ep  18/100 loss 0.0530 val_auc 0.9969
+bloodmnist_seed1 ep  19/100 loss 0.0386 val_auc 0.9955
+bloodmnist_seed1 ep  20/100 loss 0.0688 val_auc 0.9945
+bloodmnist_seed1 ep  21/100 loss 0.0738 val_auc 0.9900
+bloodmnist_seed1 ep  22/100 loss 0.0394 val_auc 0.9957
+bloodmnist_seed1 ep  23/100 loss 0.0245 val_auc 0.9972
+bloodmnist_seed1 ep  24/100 loss 0.0279 val_auc 0.9970
+bloodmnist_seed1 ep  25/100 loss 0.0366 val_auc 0.9950
+bloodmnist_seed1 ep  26/100 loss 0.0550 val_auc 0.9945
+bloodmnist_seed1 ep  27/100 loss 0.0526 val_auc 0.9943
+bloodmnist_seed1 ep  28/100 loss 0.0428 val_auc 0.9957
+bloodmnist_seed1 ep  29/100 loss 0.0515 val_auc 0.9963
+bloodmnist_seed1 ep  30/100 loss 0.0160 val_auc 0.9971
+bloodmnist_seed1 ep  31/100 loss 0.0378 val_auc 0.9904
+bloodmnist_seed1 ep  32/100 loss 0.0372 val_auc 0.9971
+bloodmnist_seed1 ep  33/100 loss 0.0254 val_auc 0.9972
+bloodmnist_seed1 ep  34/100 loss 0.0112 val_auc 0.9969
+bloodmnist_seed1 ep  35/100 loss 0.0139 val_auc 0.9968
+bloodmnist_seed1 ep  36/100 loss 0.0118 val_auc 0.9955
+bloodmnist_seed1 ep  37/100 loss 0.0529 val_auc 0.9963
+bloodmnist_seed1 ep  38/100 loss 0.0408 val_auc 0.9848
+bloodmnist_seed1 ep  39/100 loss 0.0539 val_auc 0.9962
+bloodmnist_seed1 ep  40/100 loss 0.0333 val_auc 0.9965
+bloodmnist_seed1 ep  41/100 loss 0.0147 val_auc 0.9974
+bloodmnist_seed1 ep  42/100 loss 0.0108 val_auc 0.9967
+bloodmnist_seed1 ep  43/100 loss 0.0286 val_auc 0.9942
+bloodmnist_seed1 ep  44/100 loss 0.0227 val_auc 0.9973
+bloodmnist_seed1 ep  45/100 loss 0.0085 val_auc 0.9978
+bloodmnist_seed1 ep  46/100 loss 0.0191 val_auc 0.9973
+bloodmnist_seed1 ep  47/100 loss 0.0078 val_auc 0.9975
+bloodmnist_seed1 ep  48/100 loss 0.0225 val_auc 0.9959
+bloodmnist_seed1 ep  49/100 loss 0.0188 val_auc 0.9972
+bloodmnist_seed1 ep  50/100 loss 0.0286 val_auc 0.9954
+bloodmnist_seed1 ep  51/100 loss 0.0130 val_auc 0.9976
+bloodmnist_seed1 ep  52/100 loss 0.0022 val_auc 0.9977
+bloodmnist_seed1 ep  53/100 loss 0.0015 val_auc 0.9978
+bloodmnist_seed1 ep  54/100 loss 0.0023 val_auc 0.9978
+bloodmnist_seed1 ep  55/100 loss 0.0014 val_auc 0.9978
+bloodmnist_seed1 ep  56/100 loss 0.0006 val_auc 0.9978
+bloodmnist_seed1 ep  57/100 loss 0.0007 val_auc 0.9979
+bloodmnist_seed1 ep  58/100 loss 0.0007 val_auc 0.9979
+bloodmnist_seed1 ep  59/100 loss 0.0004 val_auc 0.9979
+bloodmnist_seed1 ep  60/100 loss 0.0003 val_auc 0.9979
+bloodmnist_seed1 ep  61/100 loss 0.0003 val_auc 0.9979
+bloodmnist_seed1 ep  62/100 loss 0.0004 val_auc 0.9979
+bloodmnist_seed1 ep  63/100 loss 0.0002 val_auc 0.9979
+bloodmnist_seed1 ep  64/100 loss 0.0003 val_auc 0.9980
+bloodmnist_seed1 ep  65/100 loss 0.0003 val_auc 0.9980
+bloodmnist_seed1 ep  66/100 loss 0.0002 val_auc 0.9980
+bloodmnist_seed1 ep  67/100 loss 0.0002 val_auc 0.9980
+bloodmnist_seed1 ep  68/100 loss 0.0003 val_auc 0.9980
+bloodmnist_seed1 ep  69/100 loss 0.0002 val_auc 0.9980
+bloodmnist_seed1 ep  70/100 loss 0.0002 val_auc 0.9980
+bloodmnist_seed1 ep  71/100 loss 0.0002 val_auc 0.9981
+bloodmnist_seed1 ep  72/100 loss 0.0002 val_auc 0.9980
+bloodmnist_seed1 ep  73/100 loss 0.0002 val_auc 0.9981
+bloodmnist_seed1 ep  74/100 loss 0.0002 val_auc 0.9981
+bloodmnist_seed1 ep  75/100 loss 0.0002 val_auc 0.9980
+bloodmnist_seed1 ep  76/100 loss 0.0001 val_auc 0.9981
+bloodmnist_seed1 ep  77/100 loss 0.0001 val_auc 0.9981
+bloodmnist_seed1 ep  78/100 loss 0.0001 val_auc 0.9981
+bloodmnist_seed1 ep  79/100 loss 0.0002 val_auc 0.9981
+bloodmnist_seed1 ep  80/100 loss 0.0001 val_auc 0.9981
+bloodmnist_seed1 ep  81/100 loss 0.0001 val_auc 0.9981
+bloodmnist_seed1 ep  82/100 loss 0.0001 val_auc 0.9981
+bloodmnist_seed1 ep  83/100 loss 0.0001 val_auc 0.9981
+bloodmnist_seed1 ep  84/100 loss 0.0001 val_auc 0.9981
+bloodmnist_seed1 ep  85/100 loss 0.0001 val_auc 0.9981
+bloodmnist_seed1 ep  86/100 loss 0.0001 val_auc 0.9981
+bloodmnist_seed1 ep  87/100 loss 0.0002 val_auc 0.9981
+bloodmnist_seed1 ep  88/100 loss 0.0002 val_auc 0.9981
+bloodmnist_seed1 ep  89/100 loss 0.0001 val_auc 0.9981
+bloodmnist_seed1 ep  90/100 loss 0.0005 val_auc 0.9981
+bloodmnist_seed1 ep  91/100 loss 0.0001 val_auc 0.9981
+bloodmnist_seed1 ep  92/100 loss 0.0001 val_auc 0.9981
+bloodmnist_seed1 ep  93/100 loss 0.0001 val_auc 0.9981
+bloodmnist_seed1 ep  94/100 loss 0.0002 val_auc 0.9981
+bloodmnist_seed1 ep  95/100 loss 0.0003 val_auc 0.9981
+bloodmnist_seed1 ep  96/100 loss 0.0001 val_auc 0.9981
+bloodmnist_seed1 ep  97/100 loss 0.0001 val_auc 0.9981
+bloodmnist_seed1 ep  98/100 loss 0.0001 val_auc 0.9981
+bloodmnist_seed1 ep  99/100 loss 0.0001 val_auc 0.9981
+bloodmnist_seed1 ep 100/100 loss 0.0001 val_auc 0.9981
+[done] bloodmnist_seed1: best epoch 93 | test AUC 0.9973 (paper 0.997) | ACC 0.9524 (paper 0.95) | 33 min
+[queue] 062e058f90c2:31998 -> pneumoniamnist seed 0
+[official] pneumoniamnist_seed0: /workspace/kit/official_repo/MedMNIST2D/train_and_eval_pytorch.py --data_flag pneumoniamnist --output_root /workspace/kit/out/official_runs/seed0 --num_epochs 100 --gpu_ids 0 --model_flag resnet50 --as_rgb --run seed0 --seed 0 --num_workers 7 --eval_every_epoch val --resize --batch_size 128 --amp
+pneumoniamnist_seed0 ep   1/100 loss 0.3937 val_auc 0.9010
+pneumoniamnist_seed0 ep   2/100 loss 0.1528 val_auc 0.9885
+pneumoniamnist_seed0 ep   3/100 loss 0.1212 val_auc 0.9886
+pneumoniamnist_seed0 ep   4/100 loss 0.0941 val_auc 0.9650
+pneumoniamnist_seed0 ep   5/100 loss 0.0938 val_auc 0.9816
+pneumoniamnist_seed0 ep   6/100 loss 0.0973 val_auc 0.9797
+pneumoniamnist_seed0 ep   7/100 loss 0.0842 val_auc 0.9907
+pneumoniamnist_seed0 ep   8/100 loss 0.0784 val_auc 0.9833
+pneumoniamnist_seed0 ep   9/100 loss 0.0817 val_auc 0.9810
+pneumoniamnist_seed0 ep  10/100 loss 0.0694 val_auc 0.9845
+pneumoniamnist_seed0 ep  11/100 loss 0.0392 val_auc 0.9773
+pneumoniamnist_seed0 ep  12/100 loss 0.0530 val_auc 0.9893
+pneumoniamnist_seed0 ep  13/100 loss 0.0316 val_auc 0.9901
+pneumoniamnist_seed0 ep  14/100 loss 0.0360 val_auc 0.9912
+pneumoniamnist_seed0 ep  15/100 loss 0.0140 val_auc 0.9910
+pneumoniamnist_seed0 ep  16/100 loss 0.0188 val_auc 0.9824
+pneumoniamnist_seed0 ep  17/100 loss 0.0441 val_auc 0.9830
+pneumoniamnist_seed0 ep  18/100 loss 0.0295 val_auc 0.9851
+pneumoniamnist_seed0 ep  19/100 loss 0.0177 val_auc 0.9892
+pneumoniamnist_seed0 ep  20/100 loss 0.0090 val_auc 0.9846
+pneumoniamnist_seed0 ep  21/100 loss 0.0099 val_auc 0.9912
+pneumoniamnist_seed0 ep  22/100 loss 0.0117 val_auc 0.9904
+pneumoniamnist_seed0 ep  23/100 loss 0.0285 val_auc 0.9873
+pneumoniamnist_seed0 ep  24/100 loss 0.0262 val_auc 0.9913
+pneumoniamnist_seed0 ep  25/100 loss 0.0158 val_auc 0.9891
+pneumoniamnist_seed0 ep  26/100 loss 0.0083 val_auc 0.9861
+pneumoniamnist_seed0 ep  27/100 loss 0.0146 val_auc 0.9868
+pneumoniamnist_seed0 ep  28/100 loss 0.0432 val_auc 0.9885
+pneumoniamnist_seed0 ep  29/100 loss 0.0262 val_auc 0.9799
+pneumoniamnist_seed0 ep  30/100 loss 0.0127 val_auc 0.9858
+pneumoniamnist_seed0 ep  31/100 loss 0.0016 val_auc 0.9859
+pneumoniamnist_seed0 ep  32/100 loss 0.0026 val_auc 0.9845
+pneumoniamnist_seed0 ep  33/100 loss 0.0007 val_auc 0.9850
+pneumoniamnist_seed0 ep  34/100 loss 0.0058 val_auc 0.9828
+pneumoniamnist_seed0 ep  35/100 loss 0.0051 val_auc 0.9877
+pneumoniamnist_seed0 ep  36/100 loss 0.0252 val_auc 0.9842
+pneumoniamnist_seed0 ep  37/100 loss 0.0294 val_auc 0.9906
+pneumoniamnist_seed0 ep  38/100 loss 0.0090 val_auc 0.9926
+pneumoniamnist_seed0 ep  39/100 loss 0.0233 val_auc 0.9909
+pneumoniamnist_seed0 ep  40/100 loss 0.0170 val_auc 0.9926
+pneumoniamnist_seed0 ep  41/100 loss 0.0077 val_auc 0.9928
+pneumoniamnist_seed0 ep  42/100 loss 0.0039 val_auc 0.9925
+pneumoniamnist_seed0 ep  43/100 loss 0.0021 val_auc 0.9929
+pneumoniamnist_seed0 ep  44/100 loss 0.0012 val_auc 0.9923
+pneumoniamnist_seed0 ep  45/100 loss 0.0013 val_auc 0.9924
+pneumoniamnist_seed0 ep  46/100 loss 0.0007 val_auc 0.9917
+pneumoniamnist_seed0 ep  47/100 loss 0.0001 val_auc 0.9931
+pneumoniamnist_seed0 ep  48/100 loss 0.0001 val_auc 0.9932
+pneumoniamnist_seed0 ep  49/100 loss 0.0001 val_auc 0.9932
+pneumoniamnist_seed0 ep  50/100 loss 0.0001 val_auc 0.9930
+pneumoniamnist_seed0 ep  51/100 loss 0.0001 val_auc 0.9930
+pneumoniamnist_seed0 ep  52/100 loss 0.0001 val_auc 0.9933
+pneumoniamnist_seed0 ep  53/100 loss 0.0001 val_auc 0.9933
+pneumoniamnist_seed0 ep  54/100 loss 0.0000 val_auc 0.9932
+pneumoniamnist_seed0 ep  55/100 loss 0.0001 val_auc 0.9929
+pneumoniamnist_seed0 ep  56/100 loss 0.0001 val_auc 0.9932
+pneumoniamnist_seed0 ep  57/100 loss 0.0001 val_auc 0.9931
+pneumoniamnist_seed0 ep  58/100 loss 0.0002 val_auc 0.9932
+pneumoniamnist_seed0 ep  59/100 loss 0.0000 val_auc 0.9933
+pneumoniamnist_seed0 ep  60/100 loss 0.0000 val_auc 0.9933
+pneumoniamnist_seed0 ep  61/100 loss 0.0001 val_auc 0.9933
+pneumoniamnist_seed0 ep  62/100 loss 0.0000 val_auc 0.9931
+pneumoniamnist_seed0 ep  63/100 loss 0.0000 val_auc 0.9930
+pneumoniamnist_seed0 ep  64/100 loss 0.0000 val_auc 0.9933
+pneumoniamnist_seed0 ep  65/100 loss 0.0000 val_auc 0.9932
+pneumoniamnist_seed0 ep  66/100 loss 0.0000 val_auc 0.9933
+pneumoniamnist_seed0 ep  67/100 loss 0.0001 val_auc 0.9934
+pneumoniamnist_seed0 ep  68/100 loss 0.0000 val_auc 0.9933
+pneumoniamnist_seed0 ep  69/100 loss 0.0000 val_auc 0.9933
+pneumoniamnist_seed0 ep  70/100 loss 0.0001 val_auc 0.9932
+pneumoniamnist_seed0 ep  71/100 loss 0.0000 val_auc 0.9933
+pneumoniamnist_seed0 ep  72/100 loss 0.0000 val_auc 0.9933
+pneumoniamnist_seed0 ep  73/100 loss 0.0000 val_auc 0.9932
+pneumoniamnist_seed0 ep  74/100 loss 0.0000 val_auc 0.9932
+pneumoniamnist_seed0 ep  75/100 loss 0.0000 val_auc 0.9932
+pneumoniamnist_seed0 ep  76/100 loss 0.0000 val_auc 0.9930
+pneumoniamnist_seed0 ep  77/100 loss 0.0000 val_auc 0.9933
+pneumoniamnist_seed0 ep  78/100 loss 0.0000 val_auc 0.9931
+pneumoniamnist_seed0 ep  79/100 loss 0.0000 val_auc 0.9932
+pneumoniamnist_seed0 ep  80/100 loss 0.0000 val_auc 0.9932
+pneumoniamnist_seed0 ep  81/100 loss 0.0000 val_auc 0.9931
+pneumoniamnist_seed0 ep  82/100 loss 0.0000 val_auc 0.9932
+pneumoniamnist_seed0 ep  83/100 loss 0.0003 val_auc 0.9932
+pneumoniamnist_seed0 ep  84/100 loss 0.0000 val_auc 0.9932
+pneumoniamnist_seed0 ep  85/100 loss 0.0000 val_auc 0.9930
+pneumoniamnist_seed0 ep  86/100 loss 0.0000 val_auc 0.9933
+pneumoniamnist_seed0 ep  87/100 loss 0.0000 val_auc 0.9931
+pneumoniamnist_seed0 ep  88/100 loss 0.0000 val_auc 0.9931
+pneumoniamnist_seed0 ep  89/100 loss 0.0000 val_auc 0.9931
+pneumoniamnist_seed0 ep  90/100 loss 0.0000 val_auc 0.9932
+pneumoniamnist_seed0 ep  91/100 loss 0.0000 val_auc 0.9932
+pneumoniamnist_seed0 ep  92/100 loss 0.0000 val_auc 0.9931
+pneumoniamnist_seed0 ep  93/100 loss 0.0000 val_auc 0.9931
+pneumoniamnist_seed0 ep  94/100 loss 0.0000 val_auc 0.9933
+pneumoniamnist_seed0 ep  95/100 loss 0.0000 val_auc 0.9930
+pneumoniamnist_seed0 ep  96/100 loss 0.0000 val_auc 0.9932
+pneumoniamnist_seed0 ep  97/100 loss 0.0000 val_auc 0.9932
+pneumoniamnist_seed0 ep  98/100 loss 0.0000 val_auc 0.9932
+pneumoniamnist_seed0 ep  99/100 loss 0.0000 val_auc 0.9931
+pneumoniamnist_seed0 ep 100/100 loss 0.0000 val_auc 0.9932
+[done] pneumoniamnist_seed0: best epoch 67 | test AUC 0.9462 (paper 0.962) | ACC 0.8429 (paper 0.884) | 14 min
+[queue] 062e058f90c2:31998 -> retinamnist seed 3
+[official] retinamnist_seed3: /workspace/kit/official_repo/MedMNIST2D/train_and_eval_pytorch.py --data_flag retinamnist --output_root /workspace/kit/out/official_runs/seed3 --num_epochs 100 --gpu_ids 0 --model_flag resnet50 --as_rgb --run seed3 --seed 3 --num_workers 7 --eval_every_epoch val --resize --batch_size 128 --amp
+retinamnist_seed3 ep   1/100 loss 1.8423 val_auc 0.5613
+retinamnist_seed3 ep   2/100 loss 1.3985 val_auc 0.7640
+retinamnist_seed3 ep   3/100 loss 1.1935 val_auc 0.7098
+retinamnist_seed3 ep   4/100 loss 1.1774 val_auc 0.7737
+retinamnist_seed3 ep   5/100 loss 1.1520 val_auc 0.7649
+retinamnist_seed3 ep   6/100 loss 1.1322 val_auc 0.7631
+retinamnist_seed3 ep   7/100 loss 1.1393 val_auc 0.7513
+retinamnist_seed3 ep   8/100 loss 1.1241 val_auc 0.7844
+retinamnist_seed3 ep   9/100 loss 1.1196 val_auc 0.7738
+retinamnist_seed3 ep  10/100 loss 1.0940 val_auc 0.7826
+retinamnist_seed3 ep  11/100 loss 1.0884 val_auc 0.7499
+retinamnist_seed3 ep  12/100 loss 1.0807 val_auc 0.7810
+retinamnist_seed3 ep  13/100 loss 1.0864 val_auc 0.7756
+retinamnist_seed3 ep  14/100 loss 1.0598 val_auc 0.7749
+retinamnist_seed3 ep  15/100 loss 1.0252 val_auc 0.6772
+retinamnist_seed3 ep  16/100 loss 1.0174 val_auc 0.7344
+retinamnist_seed3 ep  17/100 loss 1.0646 val_auc 0.7696
+retinamnist_seed3 ep  18/100 loss 1.0388 val_auc 0.7281
+retinamnist_seed3 ep  19/100 loss 1.0151 val_auc 0.7696
+retinamnist_seed3 ep  20/100 loss 0.9772 val_auc 0.6783
+retinamnist_seed3 ep  21/100 loss 0.9070 val_auc 0.7444
+retinamnist_seed3 ep  22/100 loss 0.9175 val_auc 0.7134
+retinamnist_seed3 ep  23/100 loss 0.8567 val_auc 0.7297
+retinamnist_seed3 ep  24/100 loss 0.9025 val_auc 0.6650
+retinamnist_seed3 ep  25/100 loss 0.8560 val_auc 0.5980
+retinamnist_seed3 ep  26/100 loss 0.8324 val_auc 0.7115
+retinamnist_seed3 ep  27/100 loss 0.7769 val_auc 0.7168
+retinamnist_seed3 ep  28/100 loss 0.7400 val_auc 0.6086
+retinamnist_seed3 ep  29/100 loss 0.7773 val_auc 0.6829
+retinamnist_seed3 ep  30/100 loss 0.8112 val_auc 0.6862
+retinamnist_seed3 ep  31/100 loss 0.6776 val_auc 0.6960
+retinamnist_seed3 ep  32/100 loss 0.6447 val_auc 0.7325
+retinamnist_seed3 ep  33/100 loss 0.5588 val_auc 0.6476
+retinamnist_seed3 ep  34/100 loss 0.6390 val_auc 0.6709
+retinamnist_seed3 ep  35/100 loss 0.5609 val_auc 0.7023
+retinamnist_seed3 ep  36/100 loss 0.4711 val_auc 0.6878
+retinamnist_seed3 ep  37/100 loss 0.3796 val_auc 0.7017
+retinamnist_seed3 ep  38/100 loss 0.2692 val_auc 0.6813
+retinamnist_seed3 ep  39/100 loss 0.3185 val_auc 0.7254
+retinamnist_seed3 ep  40/100 loss 0.3860 val_auc 0.6998
+retinamnist_seed3 ep  41/100 loss 0.2451 val_auc 0.6870
+retinamnist_seed3 ep  42/100 loss 0.1899 val_auc 0.7197
+retinamnist_seed3 ep  43/100 loss 0.2499 val_auc 0.7309
+retinamnist_seed3 ep  44/100 loss 0.3943 val_auc 0.7199
+retinamnist_seed3 ep  45/100 loss 0.2991 val_auc 0.7355
+retinamnist_seed3 ep  46/100 loss 0.2578 val_auc 0.7272
+retinamnist_seed3 ep  47/100 loss 0.1521 val_auc 0.6636
+retinamnist_seed3 ep  48/100 loss 0.1022 val_auc 0.6451
+retinamnist_seed3 ep  49/100 loss 0.0684 val_auc 0.6648
+retinamnist_seed3 ep  50/100 loss 0.1093 val_auc 0.6351
+retinamnist_seed3 ep  51/100 loss 0.0718 val_auc 0.6741
+retinamnist_seed3 ep  52/100 loss 0.0221 val_auc 0.6866
+retinamnist_seed3 ep  53/100 loss 0.0211 val_auc 0.6876
+retinamnist_seed3 ep  54/100 loss 0.0573 val_auc 0.6864
+retinamnist_seed3 ep  55/100 loss 0.0093 val_auc 0.6886
+retinamnist_seed3 ep  56/100 loss 0.0122 val_auc 0.6847
+retinamnist_seed3 ep  57/100 loss 0.0438 val_auc 0.6881
+retinamnist_seed3 ep  58/100 loss 0.0224 val_auc 0.6938
+retinamnist_seed3 ep  59/100 loss 0.0057 val_auc 0.6902
+retinamnist_seed3 ep  60/100 loss 0.0062 val_auc 0.6872
+retinamnist_seed3 ep  61/100 loss 0.0032 val_auc 0.6839
+retinamnist_seed3 ep  62/100 loss 0.0171 val_auc 0.6850
+retinamnist_seed3 ep  63/100 loss 0.0024 val_auc 0.6908
+retinamnist_seed3 ep  64/100 loss 0.0053 val_auc 0.6888
+retinamnist_seed3 ep  65/100 loss 0.0028 val_auc 0.6892
+retinamnist_seed3 ep  66/100 loss 0.0132 val_auc 0.6886
+retinamnist_seed3 ep  67/100 loss 0.0014 val_auc 0.6869
+retinamnist_seed3 ep  68/100 loss 0.0034 val_auc 0.6910
+retinamnist_seed3 ep  69/100 loss 0.0026 val_auc 0.6894
+retinamnist_seed3 ep  70/100 loss 0.0042 val_auc 0.6914
+retinamnist_seed3 ep  71/100 loss 0.0060 val_auc 0.6905
+retinamnist_seed3 ep  72/100 loss 0.0009 val_auc 0.6879
+retinamnist_seed3 ep  73/100 loss 0.0015 val_auc 0.6882
+retinamnist_seed3 ep  74/100 loss 0.0017 val_auc 0.6901
+retinamnist_seed3 ep  75/100 loss 0.0016 val_auc 0.6892
+retinamnist_seed3 ep  76/100 loss 0.0020 val_auc 0.6883
+retinamnist_seed3 ep  77/100 loss 0.0010 val_auc 0.6890
+retinamnist_seed3 ep  78/100 loss 0.0014 val_auc 0.6879
+retinamnist_seed3 ep  79/100 loss 0.0030 val_auc 0.6905
+retinamnist_seed3 ep  80/100 loss 0.0029 val_auc 0.6878
+retinamnist_seed3 ep  81/100 loss 0.0007 val_auc 0.6891
+retinamnist_seed3 ep  82/100 loss 0.0021 val_auc 0.6876
+retinamnist_seed3 ep  83/100 loss 0.0068 val_auc 0.6870
+retinamnist_seed3 ep  84/100 loss 0.0048 val_auc 0.6899
+retinamnist_seed3 ep  85/100 loss 0.0024 val_auc 0.6905
+retinamnist_seed3 ep  86/100 loss 0.0010 val_auc 0.6902
+retinamnist_seed3 ep  87/100 loss 0.0076 val_auc 0.6876
+retinamnist_seed3 ep  88/100 loss 0.0038 val_auc 0.6858
+retinamnist_seed3 ep  89/100 loss 0.0013 val_auc 0.6850
+retinamnist_seed3 ep  90/100 loss 0.0015 val_auc 0.6883
+retinamnist_seed3 ep  91/100 loss 0.0010 val_auc 0.6919
+retinamnist_seed3 ep  92/100 loss 0.0029 val_auc 0.6904
+retinamnist_seed3 ep  93/100 loss 0.0051 val_auc 0.6883
+retinamnist_seed3 ep  94/100 loss 0.0010 val_auc 0.6913
+retinamnist_seed3 ep  95/100 loss 0.0008 val_auc 0.6904
+retinamnist_seed3 ep  96/100 loss 0.0010 val_auc 0.6892
+retinamnist_seed3 ep  97/100 loss 0.0010 val_auc 0.6920
+retinamnist_seed3 ep  98/100 loss 0.0059 val_auc 0.6932
+retinamnist_seed3 ep  99/100 loss 0.0019 val_auc 0.6923
+retinamnist_seed3 ep 100/100 loss 0.0012 val_auc 0.6909
+[done] retinamnist_seed3: best epoch 8 | test AUC 0.7076 (paper 0.716) | ACC 0.5075 (paper 0.511) | 5 min
+[queue] nothing left for this worker. When all workers are done:  python summarize.py --out_dir out
