@@ -41,7 +41,6 @@ PyTorch: it passes BatchNorm's bias tensor where a True/False flag is expected.
 | `performance_table_Akshara.xlsx` | — | the professor's sheet: P1 pre-filled, P2/std/gains are formulas |
 
 ## Run everything on RunPod (one multi-GPU pod)
-Open the pod's **Jupyter Lab** (pod page → *HTTP Services*), drag this zip into the file browser, then
 **File → New → Terminal**:
 ```bash
 mkdir -p kit && cd kit
@@ -53,9 +52,7 @@ nvidia-smi -L
 python check_env.py --3d               # ~3 min: speed + time and cost estimate
 python run_official.py --smoke         # ~2 min: the authors' 2D and 3D scripts run one epoch each
 ```
-Both must end without errors (the smoke test prints `SMOKE TEST PASSED`). **Send the output to Claude.**
-**Make sure your RunPod balance covers the estimate plus ~$10**: if the balance hits $0 the pod stops and the
-container disk is erased. Then:
+Both must end without errors (the smoke test prints `SMOKE TEST PASSED`).
 ```bash
 bash launch_workers.sh                 # Steps a, b and c on all GPUs
 #  cheaper/faster Step (c):  bash launch_workers.sh all "--joint_rounds 60"
@@ -76,8 +73,7 @@ python summarize.py --out_dir out --xlsx performance_table_Akshara.xlsx
 tar czf results_all.tgz out/results.jsonl out/joint_results.jsonl out/summary_*.csv out/results_table.tex \
     out/*.png out/history out/predictions out/logs_official logs official_patch.diff performance_table_Akshara.xlsx
 ```
-Download `results_all.tgz` (right-click → Download), check that it opens on your laptop, then
-**Terminate** the pod (the trash icon). *Stop* still bills for storage.
+
 
 ## Notes for the report
 - MedMNIST v2.2.4 removed a few blank samples from OrganA/C/S, Organ3D and Vessel3D, so today's data
