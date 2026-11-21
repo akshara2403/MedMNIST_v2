@@ -1,84 +1,151 @@
-# MedMNIST pre-warm-up exercise: complete code kit (Steps a, b, c)
+# MedMNIST v2: Reproducing the Baselines and Training One Model on Many Datasets
 
-Prof. Liang's exercise, based on MedMNIST v2 (Yang et al., *Sci Data* 2023):
-- **(a)** ResNet-50 (224) on ChestMNIST, 5 runs: mean, std, gap to the paper.
-- **(b)** the same for all 12 2D datasets (ResNet-50 at 224) and all 6 3D datasets (ResNet-50+3D).
-- **(c)** one model for all 12 2D datasets, one for all 6 3D datasets (P3), and one for all 18 (P4).
-- **(d)** the Overleaf report. `summarize.py` writes `results_table.tex` and the figures for it.
+**Akshara Ramprasad** · M.S. Data Science, Boston University
 
-## Steps (a) and (b) use the authors' own code
-As the professor asked, (a) and (b) run the scripts released by the authors
-(github.com/MedMNIST/experiments, pinned at commit `70b6b3a7`):
-- `MedMNIST2D/train_and_eval_pytorch.py --model_flag resnet50 --resize --as_rgb` (batch 128, 100 epochs)
-- `MedMNIST3D/train_and_eval_pytorch.py --model_flag resnet50 --conv Conv3d --as_rgb` (batch 32, 100 epochs),
-  plus `--shape_transform` for AdrenalMNIST3D and VesselMNIST3D (as stated in the paper)
+This project has two parts:
 
-`setup_official.sh` clones the repo and `patch_official.py` applies a **small, documented patch**: about 55
-lines per script, each marked `[warm-up patch]`, every option off by default. The full diff is saved to
-`official_patch.diff`. Without the new flags the scripts behave exactly as the originals. We switch on:
+1. **Reproducing a paper.** I reproduced the ResNet-50 results of the MedMNIST v2 paper
+   ([Yang et al., *Scientific Data*, 2023](https://doi.org/10.1038/s41597-022-01721-8)) on all
+   18 datasets, using the authors' own code, with 5 runs per dataset (90 runs in total).
+2. **Training one model on many datasets.** Building on Foundation Ark
+   ([Ma et al., MICCAI 2023](https://arxiv.org/abs/2310.09507)), I trained a single model on
+   all 12 2D datasets, one on all 6 3D datasets, and one on all 18 together.
 
-| flag | why |
+The full write-up is in the report: `MedMNIST_v2_Report_Akshara.pdf`.
+
+---
+
+## Key results
+
+| | Result |
 |---|---|
-| `--amp` | mixed precision: about 2× faster on the GPU |
-| `--eval_every_epoch val` | the original also scores train and test after every epoch, but selects the model by val AUC only, so the same model is selected. Final train/val/test evaluation is unchanged |
-| `--num_workers N` | the original resizes 28→224 on one CPU core; parallel loading keeps the GPU busy |
-| `--seed s` | seeds 0–4 for reproducible runs (the original sets none) |
-| (always) | the original overwrites `CUDA_VISIBLE_DEVICES`, which would put all 8 parallel jobs on GPU 0 |
+| **ChestMNIST** (5 runs) | test AUC **0.7695 ± 0.0016**, paper 0.773 |
+| **All 18 datasets** | **15 of 18** within 1% of the paper |
+| **One model, 12 2D datasets** | mean AUC **0.926**, vs. 0.918 for 12 separate models (paper: 0.923) |
+| **One model, all 18 datasets** | mean AUC **0.895**, vs. 0.900 for 18 separate models |
+| **Biggest gain** | BreastMNIST: 0.828 → **0.911** when trained together with the other datasets |
 
-`setup_official.sh` also fixes one line in the installed ACSConv package. Its converter crashes on current
-PyTorch: it passes BatchNorm's bias tensor where a True/False flag is expected.
+---
+
+## Part 1: Reproducing the baselines
+
+I ran the authors' training scripts from
+[MedMNIST/experiments](https://github.com/MedMNIST/experiments) (commit `70b6b3a7`) with the
+same settings as the paper:
+
+- **2D:** ResNet-50, images resized from 28×28 to 224×224
+- **3D:** ResNet-50 converted to 3D
+- **Training:** Adam, learning rate 0.001, 100 epochs; the model is picked by its best validation AUC
+- **Runs:** 5 per dataset (seeds 0 to 4)
+
+To run 90 trainings in parallel on 9 GPUs, I made a **small patch** to the scripts
+(`official_patch.diff`). It adds faster mixed-precision training, fixed random seeds,
+parallel data loading, and validation-only scoring during training. Every option is off by default,
+and the patch does not change the data, the model, or how the best epoch is picked.
+
+**Results (test AUC):**
+
+| Dataset | Paper | Mine (mean ± std of 5 runs) | Within 1%? |
+|---|---|---|---|
+| PathMNIST | 0.989 | 0.988 ± 0.005 | ✅ |
+| ChestMNIST | 0.773 | 0.769 ± 0.002 | ✅ |
+| DermaMNIST | 0.912 | 0.911 ± 0.002 | ✅ |
+| OCTMNIST | 0.958 | 0.959 ± 0.003 | ✅ |
+| PneumoniaMNIST | 0.962 | 0.957 ± 0.008 | ✅ |
+| RetinaMNIST | 0.716 | 0.717 ± 0.016 | ✅ |
+| BreastMNIST | 0.866 | 0.828 ± 0.019 | ❌ |
+| BloodMNIST | 0.997 | 0.997 ± 0.000 | ✅ |
+| TissueMNIST | 0.932 | 0.928 ± 0.002 | ✅ |
+| OrganAMNIST | 0.998 | 0.997 ± 0.000 | ✅ |
+| OrganCMNIST | 0.993 | 0.993 ± 0.001 | ✅ |
+| OrganSMNIST | 0.975 | 0.973 ± 0.003 | ✅ |
+| OrganMNIST3D | 0.994 | 0.993 ± 0.002 | ✅ |
+| NoduleMNIST3D | 0.875 | 0.892 ± 0.020 | ✅ |
+| FractureMNIST3D | 0.725 | 0.690 ± 0.033 | ❌ |
+| AdrenalMNIST3D | 0.828 | 0.842 ± 0.043 | ✅ |
+| VesselMNIST3D | 0.907 | 0.894 ± 0.025 | ❌ |
+| SynapseMNIST3D | 0.851 | 0.877 ± 0.022 | ✅ |
+
+The three datasets that miss are very small (156 to 382 test images). Their results vary more
+from run to run than the 1% margin itself, so the gap is within normal run-to-run variation.
+
+---
+
+## Part 2: One model for many datasets
+
+**The idea.** Instead of 18 separate models, one shared ResNet-50 learns from every dataset.
+Each dataset keeps its own small output layer (its own "head"), so no labels need to be merged.
+Following Ark, a slowly updated **teacher** copy of the model guides the **student** during training.
+
+**What went wrong first.** Training the datasets one after another, as in Ark, failed. The model
+forgot almost everything except the last datasets it saw: the mean validation AUC was about 0.6.
+
+**What I changed:**
+
+1. **Mix the datasets.** Each training step uses a batch from a randomly chosen dataset, so no
+   dataset is forgotten.
+2. **Give each dataset its own batch normalization.** X-rays, pathology slides and CT scans look
+   very different, so each dataset keeps its own normalization statistics. All the
+   other weights are shared.
+3. **Refresh the batch-norm statistics before every evaluation,** so they match the current model.
+4. **Balance the datasets.** Each dataset gets at most 300 training steps per round, so large
+   datasets cannot take over.
+5. **Use 2D and 3D together.** ACS convolutions
+   ([Yang et al., 2021](https://doi.org/10.1109/JBHI.2021.3049452)) let the same 2D filters process
+   3D volumes, so all 18 datasets can share one model.
+
+**Results (mean test AUC):**
+
+| Model | Separate models | One joint model |
+|---|---|---|
+| 12 2D datasets | 0.918 | **0.926** |
+| 6 3D datasets | 0.865 | 0.837 |
+| All 18 datasets | 0.900 | 0.895 |
+
+- **Small datasets gain the most.** BreastMNIST rises from 0.828 to 0.911, DermaMNIST by +0.022,
+  and PneumoniaMNIST by +0.013.
+- **2D helps 3D.** In the all-18 model, OrganMNIST3D and NoduleMNIST3D do better than in the
+  3D-only model.
+- **One limitation: negative transfer.** SynapseMNIST3D, the only electron-microscopy dataset,
+  drops from 0.877 to 0.744. Without it, the 3D gap is only −0.007.
+
+---
 
 ## Files
-| file | step | what it does |
-|---|---|---|
-| `setup_official.sh`, `patch_official.py` | a, b | get, pin and patch the authors' code |
-| `run_official.py` | a, b | runs the authors' script for one (dataset, seed); `--smoke` = 2-minute check |
-| `medmnist_joint.py` | c | Ark-style joint training: P3-2D, P3-3D, P4. The method is described in its docstring |
-| `run_queue.py`, `launch_workers.sh` | all | 93 jobs (90 runs + 3 joint models), one worker per GPU, longest first |
-| `check_env.py` | — | GPU check, data download, speed, and **time and cost estimate** |
-| `summarize.py` | a–d | tables, gaps to the paper, P3/P4 gains, curves, `results_table.tex`, fills the spreadsheet |
-| `medmnist_replicate.py`, `medmnist3d_replicate.py` | (c) | GPU data pipeline and 3D model used by the joint code; also a faster stand-alone engine (`--engine fast`), not used by default |
-| `performance_table_Akshara.xlsx` | — | the professor's sheet: P1 pre-filled, P2/std/gains are formulas |
 
-## Run everything on RunPod (one multi-GPU pod)
-**File → New → Terminal**:
-```bash
-mkdir -p kit && cd kit
-python -m zipfile -e ../medmnist_warmup_kit.zip .
-apt-get update -qq && apt-get install -y -qq tmux git
-pip install -q medmnist scikit-learn pandas matplotlib openpyxl tqdm
-bash setup_official.sh                 # authors' code + patch
-nvidia-smi -L
-python check_env.py --3d               # ~3 min: speed + time and cost estimate
-python run_official.py --smoke         # ~2 min: the authors' 2D and 3D scripts run one epoch each
-```
-Both must end without errors (the smoke test prints `SMOKE TEST PASSED`).
-```bash
-bash launch_workers.sh                 # Steps a, b and c on all GPUs
-#  cheaper/faster Step (c):  bash launch_workers.sh all "--joint_rounds 60"
-```
-You can close the browser now. To check on it later (from the `kit` folder):
-```bash
-tmux attach -t workers                 # Ctrl-b n = next GPU window, Ctrl-b d = detach
-wc -l out/results.jsonl                # 93 lines = everything finished
-tail -n 3 logs/worker_gpu*.log
-```
-If anything crashes, run `bash launch_workers.sh` again. Finished jobs are skipped and the joint models
-resume from their last round. An individual official run restarts from epoch 1, because the authors'
-script has no checkpoints.
+| File | What it does |
+|---|---|
+| `setup_official.sh`, `patch_official.py` | Download the authors' code at a fixed version and apply the patch |
+| `official_patch.diff` | Every line I changed in the authors' scripts |
+| `run_official.py` | Runs the authors' script for one dataset and seed, and records the result |
+| `run_queue.py`, `launch_workers.sh` | Run all jobs on several GPUs, one job per GPU |
+| `medmnist_joint.py` | **Part 2:** the joint model and its training |
+| `medmnist_replicate.py`, `medmnist3d_replicate.py` | Fast GPU data loading and the 3D model used by `medmnist_joint.py` |
+| `summarize.py` | Builds the result tables, figures and spreadsheet |
+| `check_env.py` | Checks the GPU and estimates training time |
+| `performance_table_Akshara.xlsx` | All results: paper (P1), my runs (P2), joint models (P3, P4), and the gains |
+| `summary_93.txt` | Text summary of all results |
+| `results_final.tgz` | Raw results, training histories and logs |
+| `logs/` | Training logs from the GPU workers |
 
-## When it is finished (93 lines in results.jsonl)
+## How to run
+
 ```bash
+pip install medmnist scikit-learn pandas matplotlib openpyxl tqdm
+bash setup_official.sh          # get and patch the authors' code
+python run_official.py --smoke  # 2-minute check that everything works
+bash launch_workers.sh          # run all 93 jobs on every available GPU
 python summarize.py --out_dir out --xlsx performance_table_Akshara.xlsx
-tar czf results_all.tgz out/results.jsonl out/joint_results.jsonl out/summary_*.csv out/results_table.tex \
-    out/*.png out/history out/predictions out/logs_official logs official_patch.diff performance_table_Akshara.xlsx
 ```
 
+I ran everything on a cloud machine with 9 NVIDIA A40 GPUs.
 
-## Notes for the report
-- MedMNIST v2.2.4 removed a few blank samples from OrganA/C/S, Organ3D and Vessel3D, so today's data
-  differs very slightly from the data used for the paper's tables.
-- Step (c) runs once (seed 0). P3 for the 2D columns comes from `joint_p3_2d`, for the 3D columns from
-  `joint_p3_3d`; P4 comes from `joint_p4`.
-- The joint code feeds images through the same pre-processing as the authors' code, done on the GPU.
-  `check_env.py` checks that it matches the official pipeline up to float rounding.
+## References
+
+- J. Yang et al. *MedMNIST v2: A large-scale lightweight benchmark for 2D and 3D biomedical image
+  classification.* Scientific Data, 2023.
+- D. Ma, J. Pang, M. B. Gotway, J. Liang. *Foundation Ark: Accruing and reusing knowledge for
+  superior and robust performance.* MICCAI, 2023.
+- J. Yang et al. *Reinventing 2D convolutions for 3D images.* IEEE JBHI, 2021.
+- W.-G. Chang et al. *Domain-specific batch normalization for unsupervised domain adaptation.*
+  CVPR, 2019.
